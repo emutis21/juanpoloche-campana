@@ -1,0 +1,43 @@
+---
+import { db } from '../data/db'
+import Subtitles from './Subtitles.astro';
+
+---
+{
+  db.map(({title})=>{
+    return (
+      <Subtitles subtitle={ title } id="propuestas" />
+    )
+  }) 
+}
+<div class="container p-0 text-center flex flex-col gap-5 bg-pigment-indigo-600 text-white">
+  {
+    db[0].propuestas.map(({title, subtitle, description})=>{
+      return (
+        <div class="">
+          <h3 class="text-4xl">{ title }</h3>
+          <h4 class="text-xl">{ subtitle }</h4>
+          <p class="text-lg">{ description }</p>
+          </div>
+          )
+        })
+  }
+  
+  <a href="/propuestas" class="
+    self-center
+    text-lg
+    bg-pigment-indigo-500
+    hover:bg-pigment-indigo-400
+    active:bg-pigment-indigo-600
+    text-white
+    font-bold
+    py-2
+    px-4
+    rounded
+    focus:outline-none
+    focus:shadow-outline
+    transition
+    duration-150
+    ease-in-out
+  " >Saber más...</a>
+</div>

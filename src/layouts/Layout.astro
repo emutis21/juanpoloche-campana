@@ -1,0 +1,137 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Navbar from '../components/Navbar/Navbar.astro';
+import Sidebar from '../components/Navbar/Sidebar.astro';
+
+interface Props {
+	pageTitle?: string;
+	pageDescription?: string;
+}
+
+const { pageTitle, pageDescription } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={pageDescription}>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.webp" />
+		<meta name="generator" content={ pageDescription } />
+		<title>Juan Poloche { pageTitle }</title>
+		<meta name="view-transition" content="same-origin" />
+		<link rel="preload" href="/imgs/bg1.webp" as="image" />
+		<link rel="preload" href="/imgs/bg2.webp" as="image" />
+		<link rel="preload" href="/imgs/bg3.webp" as="image" />
+		<ViewTransitions />
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'G-4HENYJB6RJ');
+		</script>
+	</head>
+	<body>
+		<Navbar />
+		<Sidebar />
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+/* * {
+} */
+
+html {
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--scroll-padding-top, 50px);
+}
+
+h1,
+h2,
+h3,
+p {
+	text-wrap: balance;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track {
+	border-radius: 100vh;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(280, 100%, 30%);
+	border-radius: 100vh;
+}
+
+::selection {
+  color: #fff;
+  background-color: hsl(280, 100%, 35%);
+}
+
+body {
+	background-color: hsl(280, 100%, 97%);
+	color: #000;
+}
+
+.container {
+	width: 860px;
+	max-width: 98%;
+	margin: 0 auto;
+}
+
+h1 {
+	line-height: 1;
+}
+@keyframes show {
+	from {
+		opacity: 0;
+		scale: 25%;
+	}
+
+	to {
+		opacity: 1;
+		scale: 100%;
+	}
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+img {
+	view-timeline-name: --image;
+	view-timeline-axis: block;
+
+	animation-timeline: --image;
+	animation-name: show;
+
+	animation-range: entry 25% cover 30%;
+	animation-fill-mode: both;
+}
+	
+@media (max-width: 768px){
+	html {
+		scroll-padding-top: 55px;
+	}
+	.navbar {
+		display: none;
+	}
+	.container {
+		max-width: 90%;
+	}
+}
+@media (min-width: 769px){
+	.sidebar {
+		display: none;
+	}
+}
+</style>
