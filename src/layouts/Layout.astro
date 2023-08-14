@@ -12,30 +12,46 @@ const { pageTitle, pageDescription } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content={pageDescription}>
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.webp" />
-		<meta name="generator" content={ pageDescription } />
-		<title>Juan Poloche { pageTitle }</title>
-		<meta name="view-transition" content="same-origin" />
-		<link rel="preload" href="/favicon.webp" as="image" />
-		<link rel="preload" href="/imgs/bg1.webp" as="image" />
-		<link rel="preload" href="/imgs/bg2.webp" as="image" />
-		<link rel="preload" href="/imgs/bg3.webp" as="image" />
-		<ViewTransitions />
-		<!-- Google tag (gtag.js) -->
+		<meta name="theme-color" content="#4285f4">
+		<meta name="generator" content={pageDescription}>
+		<title>Juan Poloche {pageTitle}</title>
+		<link rel="icon" type="image/svg+xml" href="/si.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="view-transition" content="same-origin">
+		
+		<script>
+			window.addEventListener('load', () => {
+				const imagesToPreload = [
+					'/imgs/bg1.webp',
+					'/imgs/bg2.webp',
+					'/imgs/bg3.webp'
+				];
+				
+				imagesToPreload.forEach(imageUrl => {
+					const image = new Image();
+					image.src = imageUrl;
+				});
+			});
+		</script>
+		
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ"></script>
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'G-4HENYJB6RJ');
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-4HENYJB6RJ');
 		</script>
+		
+		<ViewTransitions />
 	</head>
+
 	<body>
 		<Navbar />
 		<Sidebar />
@@ -44,9 +60,6 @@ const { pageTitle, pageDescription } = Astro.props;
 </html>
 
 <style is:global>
-/* * {
-} */
-
 html {
 	scrollbar-gutter: stable;
 	scroll-behavior: smooth;
@@ -136,3 +149,15 @@ img {
 	}
 }
 </style>
+
+<script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker
+				.register('/service-worker.js')
+				.catch(error => {
+					console.log('Error al registrar el Service Worker:', error);
+				});
+		});
+	}
+</script>

@@ -1,0 +1,17 @@
+{
+  "name": "Juan Poloche",
+  "short_name": "Juan Poloche",
+  "description": "Landing page de Juan Poloche",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#275c7a",
+  "theme_color": "#4285f4",
+  "icons": [
+    {
+      "src": "/si.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

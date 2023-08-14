@@ -6,6 +6,16 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  integrations: [
+    {
+      name: "manifest",
+      hooks: {
+        "astro:build:setup": options => {
+          options.vite.build.manifest = true;
+        }
+      }
+    }
+  ],
   experimental: {
     viewTransitions: true
   },
