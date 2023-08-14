@@ -10,7 +10,7 @@ import Subtitles from './Subtitles.astro';
     )
   }) 
 }
-<div class="container p-0 text-center flex flex-col gap-5 bg-pigment-indigo-600 text-white">
+<div class="container p-0 text-center flex flex-col gap-5 bg-first-600 text-white">
   {
     db[0].propuestas.map(({title, subtitle, description})=>{
       return (
@@ -26,9 +26,9 @@ import Subtitles from './Subtitles.astro';
   <a href="/propuestas" class="
     self-center
     text-lg
-    bg-pigment-indigo-500
-    hover:bg-pigment-indigo-400
-    active:bg-pigment-indigo-600
+    bg-first-500
+    hover:bg-first-400
+    active:bg-first-600
     text-white
     font-bold
     py-2

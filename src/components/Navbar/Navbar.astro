@@ -2,7 +2,7 @@
 import Whatsapp from "../Icons/Whatsapp.astro";
 
 ---
-<header class="w-full navbar sticky top-0 text-white bg-[hsl(280,100%,30%)] z-40">
+<header class="w-full navbar sticky top-0 text-white bg-third-700 z-40">
   <nav class="w-full py-3 max-w-[80%] mx-auto flex justify-between h-[4.5rem]">
     <div class="flex-grow basis-0 flex">
       <a href="/" class="flex gap-3 w-fit">
@@ -13,16 +13,60 @@ import Whatsapp from "../Icons/Whatsapp.astro";
         </div>
       </a>
     </div>
-    <ul class="flex items-center [&>li>a]:font-semibold [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-md">
-      <li><a href="/#mi-trayectoria" class="hover:bg-neon-carrot-500 active:bg-neon-carrot-700 transition-all duration-300 rounded-sm">Mi trayectoria</a></li>
-      <li><a href="/#propuestas" class="hover:bg-neon-carrot-500 active:bg-neon-carrot-700 transition-all duration-300 rounded-sm">Propuestas</a></li>
-      <li><a href="/#mi-equipo-de-trabajo" class="hover:bg-neon-carrot-500 active:bg-neon-carrot-700 transition-all duration-300 rounded-sm">Mi equipo de trabajo</a></li>
-      <li><a href="/#contacto" class="hover:bg-neon-carrot-500 active:bg-neon-carrot-700 transition-all duration-300 rounded-sm">Contacto</a></li>
+    <ul class="flex items-center [&>li>a]:font-semibold [&>li>a]:inline-block [&>li>a]:uppercase [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-md">
+      <li><a href="/#mi-trayectoria">Mi trayectoria</a></li>
+      <li><a href="/#propuestas">Propuestas</a></li>
+      <li><a href="/#mi-equipo-de-trabajo">Mi equipo de trabajo</a></li>
+      <li><a href="/#contacto">Contacto</a></li>
     </ul>
     <div class="flex justify-end flex-grow basis-0">
-      <button class="text-xl flex gap-3 px-6 py-2 items-center font-medium bg-transparent border border-neon-carrot-600 rounded-md hover:font-semibold hover:rounded-sm hover:bg-neon-carrot-600 transition-all duration-300">
+      <button class="text-xl flex gap-3 px-6 py-2 items-center font-medium bg-transparent border border-fourth-600 rounded-md hover:font-semibold hover:rounded-sm hover:bg-fourth-600 transition-all duration-300">
         Únete<Whatsapp />
       </button>
     </div>
   </nav>
 </header>
+
+<style>
+nav ul {
+	--_gap: 2rem;
+}
+
+nav li {
+	overflow: hidden;
+	position: relative;
+	min-inline-size: 3rem;
+}
+
+nav li::after {
+	content: '';
+	position: absolute;
+	inset-inline: 0;
+	inset-block-end: 0;
+	block-size: 100%;
+	background-color: hsl(25, 97%, 49%);
+  z-index: -1;
+
+	translate: var(--_translate, 0);
+	scale: var(--_scale, 0) 1;
+	transition:
+		scale 100ms var(--_scale-delay, 0ms), 
+		translate 200ms;
+}
+
+nav li:hover ~ li {
+	--_translate: -100%;
+	--_scale-delay: 200ms;
+}
+
+nav:hover li {
+	--_translate: 100%;
+	--_scale-delay: 200ms;
+}
+
+nav li:hover {
+	--_scale: 1;
+	--_translate: 0;
+	--_scale-delay: 0ms;
+}
+</style>

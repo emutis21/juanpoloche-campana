@@ -21,6 +21,7 @@ const { pageTitle, pageDescription } = Astro.props;
 		<meta name="generator" content={ pageDescription } />
 		<title>Juan Poloche { pageTitle }</title>
 		<meta name="view-transition" content="same-origin" />
+		<link rel="preload" href="/favicon.webp" as="image" />
 		<link rel="preload" href="/imgs/bg1.webp" as="image" />
 		<link rel="preload" href="/imgs/bg2.webp" as="image" />
 		<link rel="preload" href="/imgs/bg3.webp" as="image" />
@@ -77,12 +78,12 @@ p {
 }
 
 body {
-	background-color: hsl(280, 100%, 97%);
-	color: #000;
+	background-color: hsl(275, 69%, 17%);
+	color: #fff;
 }
 
 .container {
-	width: 860px;
+	width: 768px;
 	max-width: 98%;
 	margin: 0 auto;
 }

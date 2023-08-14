@@ -43,7 +43,7 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
 
           <motion.figure
             className={`w-[90%] md:w-7/12 lg:4/12 py-12 max-h-fit h-2/3 md:h-1/2 px-5 gap-6 md:gap-12 relative
-            bg-neon-carrot-600 z-50 rounded-lg overflow-y-auto
+            bg-fourth-600 z-50 rounded-lg overflow-y-auto
             shadow-lg hover:shadow-2xl transition-shadow duration-200 flex flex-col md:flex-row
             items-center justify-between md:items-start`}
             initial={{ scale: 0.5, opacity: 0 }}
@@ -60,7 +60,7 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
               className="rounded-md h-full md:w-1/2 aspect-4/3 object-cover self-center"
             />
 
-            <span className="w-full h-[3px] md:w-[5px] md:h-full bg-pigment-indigo-100 block"></span>
+            <span className="w-full h-[3px] md:w-[5px] md:h-full bg-first-100 block"></span>
 
             <figcaption className="flex flex-col gap-5 h-full w-full">
               <h2 className="text-2xl md:text-4xl font-semibold">{title}</h2>

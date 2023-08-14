@@ -4,7 +4,7 @@ export const SliderItem = ({img, title, number, description}) => {
   return (
     <div className="container cursor-grab h-full text-center flex align-center justify-center">
       <picture className="w-1/3 h-3/4 self-end p-0 flex items-end justify-center aspect-square">
-        <img src={img} alt={title} loading="lazy" className="h-full w-full drop-shadow-2xl pointer-events-none object-cover object-top" />
+        <img src={img} alt={description} loading="lazy" className="h-full w-full drop-shadow-2xl pointer-events-none object-cover object-top" />
       </picture>
 
       <div className="h-full w-1/2 flex flex-col justify-center">
@@ -17,7 +17,7 @@ export const SliderItem = ({img, title, number, description}) => {
           }}
         >
           Juan David
-          <span className="block text-[2.25rem] md:text-[4rem] lg:text-[5.3rem] text-neon-carrot-600">
+          <span className="block text-[2.25rem] md:text-[4rem] lg:text-[5.3rem] text-fourth-600">
             {title}
           </span>
         </h1>

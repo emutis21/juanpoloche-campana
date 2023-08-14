@@ -32,11 +32,11 @@ const Navigation = () => {
               <Close showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
             </div>
           </div>
-          <div className="text-2xl h-full py-5 font-semibold text-white border-t-4 border-b-4 border-neon-carrot-900">
+          <div className="text-2xl h-full py-5 font-semibold text-white border-t-4 border-b-4 border-fourth-900">
             <ul className="flex flex-col text-md [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:w-full [&>li>a]:py-2" id="landing-header">
               <li>
                 <a 
-                  className="active:bg-pigment-indigo-950 active:text-pigment-indigo-200 transition-all active:px-2"
+                  className="active:bg-first-950 active:text-first-200 transition-all active:px-2"
                   href="/#mi-trayectoria"
                   onClick={closeSidebar}
                 >
@@ -45,7 +45,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a 
-                  className="active:bg-pigment-indigo-950 active:text-pigment-indigo-200 transition-all active:px-2"
+                  className="active:bg-first-950 active:text-first-200 transition-all active:px-2"
                   href="/#propuestas"
                   onClick={closeSidebar}
                 >
@@ -54,7 +54,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a 
-                  className="active:bg-pigment-indigo-950 active:text-pigment-indigo-200 transition-all active:px-2"
+                  className="active:bg-first-950 active:text-first-200 transition-all active:px-2"
                   href="/#mi-equipo-de-trabajo"
                   onClick={closeSidebar}
                 >
@@ -63,7 +63,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a 
-                  className="active:bg-pigment-indigo-950 active:text-pigment-indigo-200 transition-all active:px-2"
+                  className="active:bg-first-950 active:text-first-200 transition-all active:px-2"
                   href="/#contacto"
                   onClick={closeSidebar}
                 >
@@ -72,7 +72,7 @@ const Navigation = () => {
               </li>
             </ul>
           </div>
-          <a href="/" className="text-xl font-black text-pigment-indigo-200 uppercase">
+          <a href="/" className="text-xl font-black text-first-200 uppercase">
             Juan Poloche
           </a>
         </aside>
