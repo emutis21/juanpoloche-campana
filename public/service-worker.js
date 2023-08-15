@@ -6,7 +6,7 @@ self.addEventListener('install', event => {
       .then(cache => {
         return cache.addAll([
           '/',
-          '/si.png',
+          '/favicon.png',
           '/imgs/bg1.webp',
           '/imgs/bg2.webp',
           '/imgs/bg3.webp',
