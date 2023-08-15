@@ -4,7 +4,7 @@
   "description": "Landing page de Juan Poloche",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#275c7a",
+  "background_color": "#481de2",
   "theme_color": "#481de2",
   "icons": [
     {
