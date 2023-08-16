@@ -21,6 +21,5 @@ export default defineConfig({
   },
   integrations: [react(), tailwind()],
   output: 'server',
-  adapters: [vercel()],
   adapter: vercel()
 });

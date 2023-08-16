@@ -1,24 +1,23 @@
 export const Arrow = () => {
   return (
     <svg
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      width="100%" 
-      height="100%" 
-      fill="#ffffff" 
-      className="hover:scale-105 transition-transform duration-200"
+      xmlns='http://www.w3.org/2000/svg'
+      className='icon icon-tabler icon-tabler-circle-arrow-right-filled hover:scale-110 transition-transform duration-75 ease'
+      width='100%'
+      height='100%'
+      viewBox='0 0 24 24'
+      strokeWidth='2'
+      stroke='currentColor'
+      fill='none'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     >
-      <defs>
-        <style>{`.cls-1{fill:#ffffff;}`}</style>
-      </defs>
+      <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
       <path
-        className="cls-1" 
-        d="M12,24A12,12,0,1,0,0,12,12.013,12.013,0,0,0,12,24ZM12,2A10,10,0,1,1,2,12,10.011,10.011,0,0,1,12,2Z"
-      />
-      <path
-        className="cls-1" 
-        d="M6,13h9.586l-2.293,2.293a1,1,0,1,0,1.414,1.414l4-4a1,1,0,0,0,0-1.414l-4-4a1,1,0,1,0-1.414,1.414L15.586,11H6a1,1,0,0,0,0,2Z"
-      />
+        d='M12 2l.324 .005a10 10 0 1 1 -.648 0l.324 -.005zm.613 5.21a1 1 0 0 0 -1.32 1.497l2.291 2.293h-5.584l-.117 .007a1 1 0 0 0 .117 1.993h5.584l-2.291 2.293l-.083 .094a1 1 0 0 0 1.497 1.32l4 -4l.073 -.082l.064 -.089l.062 -.113l.044 -.11l.03 -.112l.017 -.126l.003 -.075l-.007 -.118l-.029 -.148l-.035 -.105l-.054 -.113l-.071 -.111a1.008 1.008 0 0 0 -.097 -.112l-4 -4z'
+        strokeWidth='0'
+        fill='currentColor'
+      ></path>
     </svg>
-  );
+  )
 }

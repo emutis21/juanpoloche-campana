@@ -57,9 +57,6 @@ module.exports = {
           '950': 'hsl(8, 86%, 15%)',
         },
       },
-      aspectRatio: {
-        '4/3': '4 / 3',
-      },
 		},
 	},
 	plugins: [],

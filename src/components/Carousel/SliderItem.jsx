@@ -1,14 +1,19 @@
-import { Title } from "../Title"
+import { Title } from '../Title'
 
-export const SliderItem = ({img, title, number, description}) => {
+export const SliderItem = ({ img, title, number, description }) => {
   return (
-    <div className="container cursor-grab h-full text-center flex align-center justify-center">
-      <picture className="w-1/3 h-3/4 self-end p-0 flex items-end justify-center aspect-square">
-        <img src={img} alt={description} loading="lazy" className="h-full w-full drop-shadow-2xl pointer-events-none object-cover object-top" />
+    <div className='cursor-grab w-[98%] mx-auto h-full text-center flex align-center justify-center'>
+      <picture className='w-1/3 h-3/4 self-end p-0 flex items-end justify-center aspect-square'>
+        <img
+          src={img}
+          alt={description}
+          loading='lazy'
+          className='h-full w-full drop-shadow-2xl pointer-events-none object-cover object-top'
+        />
       </picture>
 
-      <div className="h-full w-1/2 flex flex-col justify-center">
-      <Title />
+      <div className='h-full w-1/2 flex flex-col justify-center'>
+        <Title />
         {/* <h1 className="font-black text-[7rem] md:text-[20rem]">{number}</h1>
         <h1
           className="font-black uppercase text-[1.61rem] md:text-[2.9rem] lg:text-[3.9rem]"
@@ -26,8 +31,6 @@ export const SliderItem = ({img, title, number, description}) => {
           {description}
         </h2> */}
       </div>
-
-      
     </div>
   )
 }

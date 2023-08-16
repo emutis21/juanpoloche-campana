@@ -1,16 +1,17 @@
-import Slider from "./Slider";
+import Slider from './Slider'
 
 export default function Hero() {
   return (
-    <article className="aspect-[16/9] w-full h-auto lg:h-[70vh] xl:h-[80vh] shadow-lg bg-center bg-cover bg-no-repeat md:bg-fixed"
+    <article
+      className='aspect-video w-full h-auto lg:h-[70vh] xl:h-[80vh] shadow-lg bg-center bg-cover bg-no-repeat md:bg-fixed'
       style={{
-        backgroundImage: `url(/imgs/usaquen.webp)`,
+        backgroundImage: `url(/imgs/usaquen.webp)`
       }}
-      aria-label="Imagen de fondo de Usaquén"
+      aria-label='Imagen de fondo de Usaquén'
     >
-      <div className="bg-first-950/50 backdrop-blur-[1px] md:backdrop-blur-[6px] w-full h-full">
+      <div className='bg-first-950/50 backdrop-blur-[1px] md:backdrop-blur-[6px] w-full h-full'>
         <Slider />
       </div>
     </article>
-  );
-};
+  )
+}
