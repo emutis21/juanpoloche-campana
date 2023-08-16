@@ -60,14 +60,14 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
             <span className='w-full h-[3px] md:w-[5px] md:h-full bg-first-100 block'></span>
 
             <figcaption className='flex flex-col gap-5 h-full w-full'>
-              <h2 className='text-2xl md:text-4xl font-semibold'>{title}</h2>
-              <p className='text-lg md:text-xl font-normal'>{paragraph}</p>
+              <h2 className='text-2xl md:text-3xl font-semibold'>{title}</h2>
+              <p className='text-lg font-normal'>{paragraph}</p>
               {list && Array.isArray(list) && list.length > 0 && (
                 <ul className='flex flex-col gap-2'>
                   {list.map((itemObj, index) => (
                     <li key={index} className='flex gap-2'>
-                      <span className='text-lg md:text-xl font-medium'>👏</span>
-                      <p className='text-lg md:text-xl'>{itemObj.item}</p>
+                      <span className='text-lg md:text-lg font-medium'>👏</span>
+                      <p className='text-lg md:text-lg'>{itemObj.item}</p>
                     </li>
                   ))}
                 </ul>

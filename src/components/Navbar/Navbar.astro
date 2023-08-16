@@ -3,19 +3,23 @@ import { Whatsapp } from '../Icons/Whatsapp.jsx'
 ---
 
 <header class='w-full navbar sticky top-0 bg-third-700 z-40'>
-  <nav class='w-full py-3 max-w-[80%] mx-auto flex justify-between h-[4.5rem]'>
+  <nav class='w-full py-3 max-w-[80%] mx-auto flex justify-between h-[3.5rem]'>
     <div class='flex-grow basis-0 flex'>
       <a href='/' class='flex gap-3 w-fit'>
-        <img src='/imgs/logo-jdp.webp' alt='Logo Juan Poloche' loading='lazy' class='w-[2.8rem]' />
+        <img
+          src='/imgs/logo-jdp.webp'
+          alt='Logo Juan Poloche'
+          loading='lazy'
+          class='w-[2rem] bg-cover'
+        />
         <div class='flex flex-col justify-center'>
-          <span class='block font-semibold text-md'>Juan</span>
-          <span class='block font-semibold text-md'>Poloche</span>
+          <span class='block font-semibold text-[0.7rem]'>Juan</span>
+          <span class='block font-semibold text-[0.7rem]'>Poloche</span>
         </div>
       </a>
     </div>
     <ul
-      class='flex items-center [&>li>a]:font-semibold [&>li>a]:inline-block [&>li>a]:uppercase
-      [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-md'
+      class='flex items-center [&>li>a]:font-semibold [&>li>a]:inline-block [&>li>a]:uppercase [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-[0.7rem]'
     >
       <li><a href='/#mi-trayectoria'>Mi trayectoria</a></li>
       <li><a href='/#propuestas'>Propuestas</a></li>
@@ -24,9 +28,7 @@ import { Whatsapp } from '../Icons/Whatsapp.jsx'
     </ul>
     <div class='flex justify-end flex-grow basis-0'>
       <button
-        class='text-md flex gap-3 px-6 py-2 items-center font-medium bg-transparent border
-        border-[hsl(25,97%,49%)] rounded-md hover:font-semibold hover:rounded-sm
-        hover:bg-[hsl(25,97%,49%)] transition-all duration-300'
+        class='text-[0.7rem] flex gap-2 px-4 py-1 items-center font-medium bg-transparent border border-[hsl(25,97%,49%)] rounded-md hover:font-semibold hover:rounded-sm hover:bg-[hsl(25,97%,49%)] transition-all duration-300'
       >
         Únete<Whatsapp />
       </button>

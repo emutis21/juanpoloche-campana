@@ -17,7 +17,7 @@ function CardGrid() {
   }
 
   const buttonClasses =
-    'modal-open self-end bg-first-800 hover:border-first-500 text-sm md:text-lg text-white font-semibold py-2 px-4 rounded-md'
+    'modal-open self-end bg-first-800 hover:border-first-500 text-sm md:text-md text-white font-semibold py-2 px-4 rounded-md'
 
   return (
     <div
@@ -46,7 +46,7 @@ function CardGrid() {
             className='rounded-md mb-3 aspect-[4/3] object-cover cursor-pointer hover:brightness-110 transition-all duration-300'
           />
           <figcaption className='flex flex-col justify-between gap-5 h-full'>
-            <h2 className='text-2xl lg:text-3xl font-medium'>{card.title}</h2>
+            <h2 className='text-2xl font-medium'>{card.title}</h2>
             <p className='text-lg font-normal'>{card.text.description}</p>
 
             <div className='flex w-full flex-col self-end gap-2 h-fit bottom-0'>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-cache-v2'; 
+const CACHE_NAME = 'my-cache-v4';
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -23,10 +23,8 @@ self.addEventListener('activate', event => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.filter(cacheName => {
-          
           return cacheName !== CACHE_NAME;
         }).map(cacheName => {
-          
           return caches.delete(cacheName);
         })
       );
@@ -35,10 +33,23 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  if (event.request.method === 'POST') {
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request)
+    fetch(event.request)
       .then(response => {
-        return response || fetch(event.request);
+        const responseClone = response.clone();
+
+        caches.open(CACHE_NAME).then(cache => {
+          cache.put(event.request, responseClone);
+        });
+
+        return response;
+      })
+      .catch(() => {
+        return caches.match(event.request);
       })
   );
 });
