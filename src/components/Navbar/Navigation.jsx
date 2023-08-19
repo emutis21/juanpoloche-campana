@@ -28,13 +28,20 @@ const Navigation = () => {
     <div className='flex-grow basis-0 flex justify-end'>
       <Open showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div
-        className={`top-0 right-0 w-full flex justify-end fixed bg-zinc-800/[0.16] h-full z-40 ease-in-out ${
+        className={`top-0 right-0 w-full flex justify-end fixed h-full z-40 ease-in-out ${
           showSidebar
             ? 'translate-x-0 duration-0'
             : 'translate-x-full duration-300'
         }`}
         onClick={handleOutsideClick}
       >
+        <div
+          className={`top-0 right-0 w-full fixed bg-zinc-800/[0.16] backdrop-blur-[0.5px] h-full ease-in-out ${
+            showSidebar
+              ? 'translate-x-0 duration-0'
+              : 'translate-x-full duration-0 backdrop-blur-0 bg-transparent'
+          }`}
+        ></div>
         <aside
           className={`overflow-auto flex flex-col z-40 gap-5 justify-between w-[16.5rem] right-0 h-full p-5 bg-[hsl(14,84%,45%)] duration-500 ${
             showSidebar ? 'translate-x-0 ' : 'translate-x-full'
