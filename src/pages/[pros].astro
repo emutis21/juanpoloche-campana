@@ -1,29 +1,32 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { db } from "../data/db";
-import { Title } from "../components/Title.jsx";
+import Layout from '../layouts/Layout.astro'
+import { db } from '../data/db'
+import { Title } from '../components/Title.jsx'
+import Proposals from '../components/Proposals.astro'
 
 const { pros } = Astro.params
 
-const info = db.find(d => d.id === pros)
+const info = db.find((d) => d.id === pros)
 
 if (!info) {
-  return Astro.redirect("/404")
+  return Astro.redirect('/404')
 }
 ---
 
-<Layout pageTitle="| Propuestas" pageDescription="Propuestas de la campaña para edil de Juan Poloche">
-  <main class="box bg-first-700 pt-[1rem]">
-    <div class="grid place-content-center py-4">
+<Layout
+  pageTitle='| Propuestas'
+  pageDescription='Propuestas de la campaña para edil de Juan Poloche'
+>
+  <main class='box pt-[1rem]'>
+    <div class='grid place-content-center py-4'>
       <Title />
     </div>
-    <a href="/">
-      <h2 class="text-3xl" style="view-transition-name: pros" >   
+    <a href='/'>
+      <h2 class='text-3xl' style='view-transition-name: pros'>
         {info.title}
       </h2>
+      <Proposals />
     </a>
   </main>
-  <footer >
-    
-  </footer>
+  <footer></footer>
 </Layout>

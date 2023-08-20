@@ -80,6 +80,7 @@ const { pageTitle, pageDescription } = Astro.props
 	body {
 		background-color: hsl(275, 69%, 17%);
 		color: #fff;
+		font-family: 'InterTight', sans-serif;
 	}
 
 	h1,
@@ -107,6 +108,12 @@ const { pageTitle, pageDescription } = Astro.props
 	::selection {
 		background-color: hsl(280, 100%, 35%);
 		color: #fff;
+	}
+
+	@font-face {
+		font-family: 'InterTight';
+		src: url('/fonts/InterTight-Medium.ttf')
+			format('truetype');
 	}
 
 	.box {
