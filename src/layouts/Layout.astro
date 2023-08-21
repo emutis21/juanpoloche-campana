@@ -36,7 +36,7 @@ const { pageTitle, pageDescription } = Astro.props
     />
     <meta name='theme-color' content='#481de2' />
     <title>Juan Poloche {pageTitle}</title>
-    <link rel='icon' type='image' href='/favicon.png' />
+    <link rel='icon' type='image' href='/imgs/test-minilogo-transparent.webp' />
     <link rel='manifest' href='/manifest.json' />
     <meta name='view-transitions' content='same-origin' />
 
@@ -70,11 +70,12 @@ const { pageTitle, pageDescription } = Astro.props
     <slot />
   </body>
 </html>
+
 <style is:global>
 	html {
 		scrollbar-gutter: stable;
 		scroll-behavior: smooth;
-		scroll-padding-top: var(--scroll-padding-top, 50px);
+		scroll-padding-top: var(--scroll-padding-top, 40px);
 	}
 	
 	body {
@@ -114,6 +115,14 @@ const { pageTitle, pageDescription } = Astro.props
 		font-family: 'InterTight';
 		src: url('/fonts/InterTight-Medium.ttf')
 			format('truetype');
+		font-weight: 500;
+	}
+
+	@font-face {
+		font-family: 'InterTight-Bold';
+		src: url('/fonts/InterTight-SemiBold.ttf')
+			format('truetype');
+		font-weight: 800;
 	}
 
 	.box {
@@ -156,7 +165,7 @@ const { pageTitle, pageDescription } = Astro.props
 
 	@media (max-width: 768px) {
 		html {
-			scroll-padding-top: 55px;
+			scroll-padding-top: 45px;
 		}
 		
 		.navbar {

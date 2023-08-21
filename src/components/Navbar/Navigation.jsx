@@ -100,20 +100,20 @@ const Navigation = () => {
               </li>
             </ul>
           </div>
-          <div className='flex justify-end gap-5 h-[2rem]'>
+          <div className='flex content-between h-[1.725rem]'>
             <a
               href='https://www.facebook.com/profile.php?id=100094611160568'
-              className='flex-1'
+              className='flex-1 p-0'
             >
               <Facebook />
             </a>
             <a
               href='https://www.instagram.com/juanpolocheq/'
-              className='flex-1'
+              className='flex-1 p-0'
             >
               <Instagram />
             </a>
-            <a href='#' className='flex-1'>
+            <a href='#' className='flex-1 p-0'>
               <Whatsapp />
             </a>
           </div>
