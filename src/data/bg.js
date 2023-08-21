@@ -15,6 +15,12 @@ export const bg = [
     id: 3,
     description: 'Candidat',
     img: '/imgs/test-bg-3-jennifer.webp',
-    sizes: 'full'
+    sizes: 'full pt-12 md:pt-60'
+  },
+  {
+    id: 4,
+    description: 'Candidato a edil Usaquén4',
+    img: '/imgs/test-bg-4-1.webp',
+    sizes: '1/2 pt-16 md:pt-60'
   }
 ]
