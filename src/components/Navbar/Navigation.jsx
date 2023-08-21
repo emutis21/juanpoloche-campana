@@ -58,9 +58,7 @@ const Navigation = () => {
             </div>
           </div>
           <div className='text-xl h-full py-5 text-white border-t-4 border-b-4 border-first-800'>
-            <ul
-              className='flex flex-col text-md [&>li>a]:font-normal [&>li>a]:inline-block [&>li>a]:w-full [&>li>a]:py-2'
-            >
+            <ul className='flex flex-col text-md [&>li>a]:font-normal [&>li>a]:inline-block [&>li>a]:w-full [&>li>a]:py-2'>
               <li>
                 <a
                   className='active:bg-first-950 active:text-first-200 transition-all active:px-2'
@@ -114,11 +112,7 @@ const Navigation = () => {
             >
               <Instagram />
             </a>
-            <a
-              href='#'
-              className='flex-1 p-0'
-              aria-label='Whatsapp'
-            >
+            <a href='#' className='flex-1 p-0' aria-label='Whatsapp'>
               <Whatsapp />
             </a>
           </div>

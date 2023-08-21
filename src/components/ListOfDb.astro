@@ -3,7 +3,7 @@ import { db } from '../data/db'
 import Subtitles from './Subtitles.astro'
 ---
 
-<aside class="flex flex-col">
+<aside class='flex flex-col'>
 	{
 		db.map(({ title }) => {
 			return <Subtitles subtitle={title} id='propuestas' />

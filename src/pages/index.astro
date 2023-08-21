@@ -1,20 +1,18 @@
 ---
-import ListOfDb from "../components/ListOfDb.astro";
-import Subtitles from "../components/Subtitles.astro";
-import Hero from "../components/Carousel/Hero.jsx";
-import Layout from "../layouts/Layout.astro";
-import Cards from "../components/Cards.jsx";
+import ListOfDb from '../components/ListOfDb.astro'
+import Subtitles from '../components/Subtitles.astro'
+import Hero from '../components/Carousel/Hero.jsx'
+import Layout from '../layouts/Layout.astro'
+import Cards from '../components/Cards.jsx'
 ---
 
-<Layout pageTitle="| Inicio" pageDescription="Presentación Juan Poloche">
-
+<Layout pageTitle='| Inicio' pageDescription='Presentación Juan Poloche'>
 	<main>
 		<Hero client:load />
-		<Subtitles subtitle="Mi trayectoria" id="mi-trayectoria" />
+		<Subtitles subtitle='Mi trayectoria' id='mi-trayectoria' />
 		<Cards client:visible />
 		<ListOfDb />
-		<Subtitles subtitle="Mi equipo de trabajo" id="mi-equipo-de-trabajo" />
-		<Subtitles subtitle="Contacto" id="contacto" />
+		<Subtitles subtitle='Mi equipo de trabajo' id='mi-equipo-de-trabajo' />
+		<Subtitles subtitle='Contacto' id='contacto' />
 	</main>
-
 </Layout>

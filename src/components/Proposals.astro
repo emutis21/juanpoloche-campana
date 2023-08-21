@@ -4,24 +4,24 @@ import Subtitles from './Subtitles.astro'
 ---
 
 {
-  db.map(({ title }) => {
-    return <Subtitles subtitle={title} id='propuestas' />
-  })
+	db.map(({ title }) => {
+		return <Subtitles subtitle={title} id='propuestas' />
+	})
 }
 <ul class='box p-0 text-center flex flex-col gap-5 text-white'>
-  {
-    db[0].propuestas.map(({ title, subtitle, description }) => {
-      return (
-        <li class=''>
-          <h4 class='text-xl md:text-2xl'>{title}</h4>
-        </li>
-      )
-    })
-  }
+	{
+		db[0].propuestas.map(({ title, subtitle, description }) => {
+			return (
+				<li class=''>
+					<h4 class='text-xl md:text-2xl'>{title}</h4>
+				</li>
+			)
+		})
+	}
 
-  <a
-    href='/propuestas'
-    class='self-center text-lg bg-first-900 hover:bg-first-400 active:bg-first-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ransition duration-150 ease-in-out'
-    >Saber más...</a
-  >
+	<a
+		href='/propuestas'
+		class='self-center text-lg bg-first-900 hover:bg-first-400 active:bg-first-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ransition duration-150 ease-in-out'
+		>Saber más...</a
+	>
 </ul>

@@ -6,22 +6,26 @@ import compressor from 'astro-compressor'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    react(),
-    tailwind(),
-    compressor({ gzip: true, brotli: true }),
-    {
-      name: 'manifest',
-      hooks: {
-        'astro:build:setup': options => {
-          options.vite.build.manifest = true
-        }
-      }
-    }
-  ],
-  experimental: {
-    viewTransitions: true
-  },
-  output: 'server',
-  adapter: vercel()
+	integrations: [
+		react(),
+		tailwind(),
+		compressor({
+			gzip: true,
+			brotli: true,
+			fileExtensions: ['js', 'css', 'html', 'json', 'svg', 'png', 'webp', 'ttf']
+		}),
+		{
+			name: 'manifest',
+			hooks: {
+				'astro:build:setup': (options) => {
+					options.vite.build.manifest = true
+				}
+			}
+		}
+	],
+	experimental: {
+		viewTransitions: true
+	},
+	output: 'server',
+	adapter: vercel()
 })

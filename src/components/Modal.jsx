@@ -35,19 +35,22 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
       {isOpen && (
         <div className='overflow-y-hidden text-white fixed w-full h-full z-50 top-0 left-0 flex items-center justify-center'>
           <div
-            className='modal-verlay absolute w-full h-full backdrop-blur-[2px] bg-gray-900/70'
+            className='modal-verlay absolute w-full h-full backdrop-blur-[2px] bg-black/30'
             onClick={handleCloseModal}
           ></div>
 
           <motion.figure
-            className={`w-11/12 sm:w-7/12 md:w-10/12 lg:w-8/12 py-12 max-h-fit h-2/3 md:h-1/2 px-5 gap-6 md:gap-12 relative bg-first-600
-            z-50 rounded-lg overflow-y-auto shadow-lg hover:shadow-2xl transition-shadow duration-200 flex flex-col md:flex-row
+            className={`w-11/12 sm:w-7/12 md:w-10/12 lg:w-8/12 py-12 max-h-fit h-2/3 md:h-1/2 px-5 gap-6 md:gap-12 relative bg-first-900
+            rounded-lg overflow-y-auto shadow-lg hover:shadow-2xl transition-shadow duration-200 flex flex-col md:flex-row
             items-center justify-between md:items-start`}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
           >
-            <button onClick={handleCloseModal} className='w-8 top-2 md:w-10 absolute md:top-1 right-3'>
+            <button
+              onClick={handleCloseModal}
+              className='w-8 top-2 md:w-10 absolute md:top-1 right-3'
+            >
               <Close />
             </button>
             <img
@@ -60,14 +63,23 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
             <span className='w-full h-[3px] md:w-[5px] md:h-full bg-first-100 block'></span>
 
             <figcaption className='flex flex-col gap-5 h-full w-full'>
-              <h2 className='text-2xl md:text-3xl font-semibold'>{title}</h2>
-              <p className='text-lg font-normal'>{paragraph}</p>
+              <h2
+                className='text-3xl md:text-4xl font-bold text-second-500'
+                dangerouslySetInnerHTML={{ __html: title }}
+              ></h2>
+              <p
+                className='text-lg font-normal'
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+              ></p>
               {list && Array.isArray(list) && list.length > 0 && (
-                <ul className='flex flex-col gap-2'>
+                <ul className='flex flex-col gap-5 pb-8 md:pb-0'>
                   {list.map((itemObj, index) => (
-                    <li key={index} className='flex gap-2'>
-                      <span className='text-lg md:text-lg font-medium'>👏</span>
-                      <p className='text-lg md:text-lg'>{itemObj.item}</p>
+                    <li key={index} className='flex w-full gap-2'>
+                      <span className='text-lg md:text-lg font-medium'>💜</span>
+                      <p
+                        className='text-lg md:text-lg'
+                        dangerouslySetInnerHTML={{ __html: itemObj.item }}
+                      ></p>
                     </li>
                   ))}
                 </ul>

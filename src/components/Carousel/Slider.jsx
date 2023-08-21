@@ -101,7 +101,13 @@ export default function Slider() {
             }
           }}
         >
-          <SliderItem title={title} sizes={sizes} description={description} img={img} number={number} />
+          <SliderItem
+            title={title}
+            sizes={sizes}
+            description={description}
+            img={img}
+            number={number}
+          />
         </motion.div>
       </AnimatePresence>
 
