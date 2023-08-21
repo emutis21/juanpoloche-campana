@@ -43,7 +43,7 @@ const Navigation = () => {
           }`}
         ></div>
         <aside
-          className={`overflow-auto flex flex-col z-40 gap-5 justify-between w-[16.5rem] right-0 h-full p-5 bg-second-600 duration-500 ${
+          className={`overflow-auto flex flex-col z-40 gap-5 justify-between w-[16.5rem] right-0 h-full p-5 bg-second-700 duration-500 ${
             showSidebar ? 'translate-x-0 ' : 'translate-x-full'
           }`}
         >
@@ -104,16 +104,22 @@ const Navigation = () => {
             <a
               href='https://www.facebook.com/profile.php?id=100094611160568'
               className='flex-1 p-0'
+              aria-label='Facebook'
             >
               <Facebook />
             </a>
             <a
               href='https://www.instagram.com/juanpolocheq/'
               className='flex-1 p-0'
+              aria-label='Instagram'
             >
               <Instagram />
             </a>
-            <a href='#' className='flex-1 p-0'>
+            <a
+              href='#'
+              className='flex-1 p-0'
+              aria-label='Whatsapp'
+            >
               <Whatsapp />
             </a>
           </div>
