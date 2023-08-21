@@ -3,7 +3,8 @@ export const cards = [
     id: 1,
     title: 'Activismo',
     text: {
-      description: 'Mi compromiso en el colegio Usaquén',
+      description:
+        'Mi profundo compromiso con el colegio Usaquén se tradujo en acciones concretas.',
       paragraph:
         'Durante mi tiempo en el colegio Usaquén, me enfoqué apasionadamente en fortalecer nuestra comunidad estudiantil y promover el aprendizaje cognitivo y social. Aquí están los aspectos destacados de mi activismo:',
       list: [
