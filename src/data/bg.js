@@ -9,7 +9,7 @@ export const bg =  [
     id: 2,
     description: "Candidato a edil Usaquén2",
     img: "/imgs/test-bg-2-1.webp",
-    sizes: "1/2 md:pt-48"
+    sizes: "1/2 pt-24 md:pt-48"
   },
   {
     id: 3,
