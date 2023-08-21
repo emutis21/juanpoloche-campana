@@ -116,6 +116,8 @@ const { pageTitle, pageDescription } = Astro.props
 		src: url('/fonts/InterTight-Medium.ttf')
 			format('truetype');
 		font-weight: 500;
+		font-style: normal;
+		font-display: fallback;
 	}
 
 	@font-face {
@@ -123,6 +125,8 @@ const { pageTitle, pageDescription } = Astro.props
 		src: url('/fonts/InterTight-SemiBold.ttf')
 			format('truetype');
 		font-weight: 800;
+		font-style: normal;
+		font-display: fallback;
 	}
 
 	.box {
@@ -165,7 +169,7 @@ const { pageTitle, pageDescription } = Astro.props
 
 	@media (max-width: 768px) {
 		html {
-			scroll-padding-top: 40px;
+			scroll-padding-top: 50px;
 		}
 		
 		.navbar {

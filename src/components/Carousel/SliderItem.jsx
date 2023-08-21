@@ -1,14 +1,23 @@
+import { motion } from 'framer-motion'
 import { Title } from '../Title'
 
-export const SliderItem = ({ img, title, number, description }) => {
+export const SliderItem = ({ img, sizes, title, number, description }) => {
   return (
     <div className='cursor-grab w-[98%] mx-auto h-full text-center flex align-center justify-center'>
-      <picture className='w-1/3 h-3/4 self-end p-0 flex items-end justify-center aspect-square'>
-        <img
+      <picture className={`md:w-${sizes} w-1/2 flex justify-center justify-self-end items-end p-0`}>
+        <motion.img
+          transition={{
+            ease: 'linear',
+            duration: 2,
+            x: { duration: 1 }
+          }}
           src={img}
+          srcSet={`${img} 1x, ${img} 2x`}
+          sizes='(min-width: 768px) 50vw, 100vw'
+
           alt={description}
           loading='lazy'
-          className='h-full w-full drop-shadow-2xl pointer-events-none object-cover object-top'
+          className='h-full w-full drop-shadow-2xl pointer-events-none object-contain object-bottom'
         />
       </picture>
 

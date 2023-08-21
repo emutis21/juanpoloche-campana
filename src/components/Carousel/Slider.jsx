@@ -67,7 +67,7 @@ export default function Slider() {
   }, [activeIndex])
 
   const bgIndex = wrap(0, bg.length, activeIndex)
-  const { title, description, img, number } = bg[bgIndex]
+  const { title, description, img, number, sizes } = bg[bgIndex]
 
   const paginate = (newDirection) => {
     setActiveIndex((prevIndex) => wrap(0, bg.length, prevIndex + newDirection))
@@ -101,7 +101,7 @@ export default function Slider() {
             }
           }}
         >
-          <SliderItem title={title} description={description} img={img} number={number} />
+          <SliderItem title={title} sizes={sizes} description={description} img={img} number={number} />
         </motion.div>
       </AnimatePresence>
 
