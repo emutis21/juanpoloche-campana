@@ -35,7 +35,7 @@ function CardGrid() {
           }}
           viewport={{ once: true, amount: 0.1 }}
           key={card.id}
-          className='max-w-lg min-h-full mx-auto flex-1 py-6 px-4 bg-third-50 text-black [&>img]:hover:brightness-110 rounded-lg
+          className='max-w-lg min-h-full mx-auto flex-1 py-6 px-4 bg-white text-black [&>img]:hover:brightness-110 rounded-lg
           overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between'
         >
           <img
@@ -46,7 +46,7 @@ function CardGrid() {
             className='rounded-md mb-3 aspect-[4/3] object-cover cursor-pointer hover:brightness-110 transition-all duration-300'
           />
           <figcaption className='flex flex-col justify-between gap-5 h-full'>
-            <h2 className='text-2xl font-semibold text-second-700'>{card.title}</h2>
+            <h2 className='text-2xl font-semibold text-second-500'>{card.title}</h2>
             <p className='text-lg font-medium text-first-900'>{card.text.description}</p>
 
             <div className='flex w-full flex-col self-end gap-2 h-fit bottom-0'>
