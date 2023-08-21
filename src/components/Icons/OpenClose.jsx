@@ -4,7 +4,7 @@ export const Open = ({ showSidebar, setShowSidebar }) => {
       fill='none'
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
-      className='cursor-pointer flex justify-end bg-fourth-600 rounded'
+      className='cursor-pointer flex justify-end bg-second-600 rounded'
       onClick={() => setShowSidebar(!showSidebar)}
     >
       <path

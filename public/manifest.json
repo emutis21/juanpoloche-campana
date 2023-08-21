@@ -1,11 +1,11 @@
 {
-  "name": "Juan Poloche",
-  "short_name": "JDP",
+  "name": "Juan David Poloche",
+  "short_name": "Juan Poloche",
   "description": "Landing page de Juan Poloche",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#481de2",
-  "theme_color": "#481de2",
+  "background_color": "#301691",
+  "theme_color": "#301691",
   "icons": [
     {
       "src": "/favicon.png",

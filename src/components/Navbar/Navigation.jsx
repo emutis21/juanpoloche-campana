@@ -36,14 +36,14 @@ const Navigation = () => {
         onClick={handleOutsideClick}
       >
         <div
-          className={`top-0 right-0 w-full fixed bg-zinc-800/[0.16] backdrop-blur-[0.5px] h-full ease-in-out ${
+          className={`top-0 right-0 w-full fixed bg-zinc-800/[0.16] backdrop-blur-[1px] h-full ease-in-out ${
             showSidebar
               ? 'translate-x-0 duration-0'
               : 'translate-x-full duration-0 backdrop-blur-0 bg-transparent'
           }`}
         ></div>
         <aside
-          className={`overflow-auto flex flex-col z-40 gap-5 justify-between w-[16.5rem] right-0 h-full p-5 bg-[hsl(14,84%,45%)] duration-500 ${
+          className={`overflow-auto flex flex-col z-40 gap-5 justify-between w-[16.5rem] right-0 h-full p-5 bg-second-600 duration-500 ${
             showSidebar ? 'translate-x-0 ' : 'translate-x-full'
           }`}
         >
@@ -57,7 +57,7 @@ const Navigation = () => {
               />
             </div>
           </div>
-          <div className='text-2xl h-full py-5 font-semibold text-white border-t-4 border-b-4 border-fourth-900'>
+          <div className='text-2xl h-full py-5 font-semibold text-white border-t-4 border-b-4 border-second-800'>
             <ul
               className='flex flex-col text-md [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:w-full [&>li>a]:py-2'
               id='landing-header'

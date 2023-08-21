@@ -8,7 +8,7 @@ export const Title = () => {
         }}
       >
         Juan David
-        <span className='block text-[2.25rem] md:text-[4rem] lg:text-[5.3rem] text-fourth-500'>
+        <span className='block text-[2.25rem] md:text-[4rem] lg:text-[5.3rem] text-red-500'>
           Poloche
         </span>
       </h1>
