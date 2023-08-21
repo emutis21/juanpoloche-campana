@@ -40,7 +40,7 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
           ></div>
 
           <motion.figure
-            className={`w-11/12 sm:w-7/12 md:w-10/12 lg:w-8/12 py-12 max-h-fit h-2/3 md:h-1/2 px-5 gap-6 md:gap-12 relative bg-first-900
+            className={`w-11/12 sm:w-7/12 md:w-10/12 lg:w-8/12 py-12 max-h-fit h-[75%] md:h-1/2 px-5 gap-6 md:gap-12 relative bg-first-900
             rounded-lg overflow-y-auto shadow-lg hover:shadow-2xl transition-shadow duration-200 flex flex-col md:flex-row
             items-center justify-between md:items-start`}
             initial={{ scale: 0.5, opacity: 0 }}
