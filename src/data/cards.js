@@ -38,52 +38,52 @@ export const cards = [
     title: 'Participación',
     text: {
       description:
-        'La participación ciudadana es un derecho que tenemos todas las personas para',
+        'Mi dedicación hacia la comunidad se manifiesta a lo largo de años de activismo y participación enérgica.',
       paragraph:
-        'La participación ciudadana es un derecho que tenemos todas las personas para incidir en las decisiones que afectan nuestra vida. En este apartado encontrarás información sobre cómo participar, cómo organizarte, cómo participar en protestas, entre otros temas.',
+        'Mi vida ha sido un constante foco de socializaciones, trabajos y participaciones en comunidades jóvenes y adultas. He compartido <strong>sus problemas como si fueran los míos</strong>, luchando por <strong>los derechos comerciales, juveniles y la igualdad</strong>. Mi participación incluye:',
       list: [
         {
           id: 1,
-          item: '¿Qué es la participación?'
+          item: '<strong>Marchas por la inversión en infraestructura educativa para la uinversidad Nacional</strong> y <strong>la matrícula cero para los jóvenes.</strong>'
         },
         {
           id: 2,
-          item: '¿Cómo participar?'
+          item: '<strong>Liderazgo estudiantil en paros escolares</strong> para enfrentar <strong>la mala administración.</strong>'
         },
         {
           id: 3,
-          item: '¿Cómo organizarte?'
+          item: '<strong>Defensa de los comerciantes</strong> durante <strong>la pandemia del COVID-19,</strong> exigiendo <strong>apoyo de la alcaldía mayor de Bogotá.</strong>'
+        },
+        {
+          id: 4,
+          item: "<strong>Consejero local de juventud con 255 votos,</strong> representando a mi partido <strong>'Dignidad y Compromiso'.</strong>"
         }
       ]
     },
-    img: '/imgs/carcerolazo.webp',
-    alt: 'IED Usaquén'
+    img: '/imgs/cacerolazo.webp',
+    alt: 'Participación'
   },
   {
     id: 3,
     title: 'Estudios',
     text: {
       description:
-        'Los estudios son una actividad que realizamos para aprender sobre un tema',
+        'Mi formación académica ha sido un pilar fundamental en mi vida y en mi toma de desiciones.',
       paragraph:
-        'Los estudios son una actividad que realizamos para aprender sobre un tema específico. En este apartado encontrarás información sobre cómo estudiar, cómo organizarte, cómo participar en protestas, entre otros temas.',
+        'Me he formado en la localidad de Usaquén, comenzando mi educación primaria en el colegio Divino Maestro y luego ingresando al extraordinario Colegio Usaquén donde me gradué como parte de la promoción del 2018. Mis estudios universitarios incluyen:',
       list: [
         {
           id: 1,
-          item: '¿Qué son los estudios?'
+          item: '<strong>Pregrado en Derecho:</strong> Inicié mi formación en la Universidad La Gran Colombia, donde actualmente estoy en el octavo semestre.'
         },
         {
           id: 2,
-          item: '¿Cómo estudiar?'
-        },
-        {
-          id: 3,
-          item: '¿Cómo organizarte?'
+          item: '<strong>Beca en Sociología:</strong> Gracias a mi esfuerzo diario, obtuve una beca para estudiar Sociología en la Universidad Externado de Colombia, continuando mi compromiso con la transformación y ayuda a la comunidad.'
         }
       ]
     },
     img: '/imgs/iedusaquen.webp',
-    alt: 'IED Usaquén'
+    alt: 'Estudios'
   },
   {
     id: 4,

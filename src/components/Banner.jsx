@@ -1,6 +1,6 @@
 export const Banner = () => {
   return (
-    <div className='flex w-8/12 md:w-10/12 h-fit'>
+    <div className='flex w-full md:w-10/12 h-fit'>
       <picture className=''>
         <img src='/imgs/vote-1.webp' alt='Marque así' className='' />
       </picture>
