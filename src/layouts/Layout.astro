@@ -129,6 +129,24 @@ const { pageTitle, pageDescription } = Astro.props
 		font-display: fallback;
 	}
 
+	@font-face {
+		font-family: 'InterTight-Regular';
+		src: url('/fonts/InterTight-Regular.ttf')
+			format('truetype');
+		font-weight: 400;
+		font-style: normal;
+		font-display: fallback;
+	}
+
+	@font-face {
+		font-family: 'InterTight-ExtraBold';
+		src: url('/fonts/InterTight-ExtraBoldItalic.ttf')
+			format('truetype');
+		font-weight: 900;
+		font-style: normal;
+		font-display: fallback;
+	}
+
 	.box {
 		width: 900px;
 		max-width: 98%;

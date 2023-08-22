@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Title } from '../Title'
+import { Banner } from '../Banner'
 
 export const SliderItem = ({ img, sizes, title, number, description }) => {
   return (
@@ -22,8 +23,9 @@ export const SliderItem = ({ img, sizes, title, number, description }) => {
         />
       </picture>
 
-      <div className='h-full w-1/2 flex flex-col justify-center'>
+      <div className='h-full w-1/2 flex gap-12 flex-col justify-center items-center'>
         <Title />
+        <Banner />
         {/* <h1 className="font-black text-[7rem] md:text-[20rem]">{number}</h1>
         <h1
           className="font-black uppercase text-[1.61rem] md:text-[2.9rem] lg:text-[3.9rem]"
