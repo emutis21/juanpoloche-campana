@@ -6,6 +6,7 @@ import { Whatsapp } from '../Icons/Whatsapp'
 
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false)
+  const [activeLink, setActiveLink] = useState('')
 
   const handleOutsideClick = (event) => {
     if (showSidebar && !event.target.closest('.flex.flex-col')) {
@@ -23,6 +24,29 @@ const Navigation = () => {
       document.body.classList.remove('overflow-hidden')
     }
   }, [showSidebar])
+
+  const sections = document.querySelectorAll('section[id]')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 63
+        const sectionId = current.getAttribute('id')
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          setActiveLink(sectionId)
+        }
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <div className='flex-grow basis-0 flex justify-end'>
@@ -61,7 +85,20 @@ const Navigation = () => {
             <ul className='flex flex-col text-md [&>li>a]:font-normal [&>li>a]:inline-block [&>li>a]:w-full [&>li>a]:py-2'>
               <li>
                 <a
-                  className='active:bg-first-950 active:text-first-200 transition-all active:px-2'
+                  className={`${
+                    activeLink === 'inicio' ? 'active-link' : ''
+                  } active:bg-first-950 active:text-first-200 transition-all active:px-2`}
+                  href='/#inicio'
+                  onClick={closeSidebar}
+                >
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a
+                  className={`${
+                    activeLink === 'mi-trayectoria' ? 'active-link' : ''
+                  } active:bg-first-950 active:text-first-200 transition-all active:px-2`}
                   href='/#mi-trayectoria'
                   onClick={closeSidebar}
                 >
@@ -70,7 +107,9 @@ const Navigation = () => {
               </li>
               <li>
                 <a
-                  className='active:bg-first-950 active:text-first-200 transition-all active:px-2'
+                  className={`${
+                    activeLink === 'propuestas' ? 'active-link' : ''
+                  } active:bg-first-950 active:text-first-200 transition-all active:px-2`}
                   href='/#propuestas'
                   onClick={closeSidebar}
                 >
@@ -79,7 +118,9 @@ const Navigation = () => {
               </li>
               <li>
                 <a
-                  className='active:bg-first-950 active:text-first-200 transition-all active:px-2'
+                  className={`${
+                    activeLink === 'mi-equipo-de-trabajo' ? 'active-link' : ''
+                  } active:bg-first-950 active:text-first-200 transition-all active:px-2`}
                   href='/#mi-equipo-de-trabajo'
                   onClick={closeSidebar}
                 >
@@ -88,7 +129,9 @@ const Navigation = () => {
               </li>
               <li>
                 <a
-                  className='active:bg-first-950 active:text-first-200 transition-all active:px-2'
+                  className={`${
+                    activeLink === 'contacto' ? 'active-link' : ''
+                  } active:bg-first-950 active:text-first-200 transition-all active:px-2`}
                   href='/#contacto'
                   onClick={closeSidebar}
                 >

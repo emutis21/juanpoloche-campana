@@ -9,10 +9,18 @@ import Cards from '../components/Cards.jsx'
 <Layout pageTitle='| Inicio' pageDescription='Presentación Juan Poloche'>
 	<main>
 		<Hero client:load />
-		<Subtitles subtitle='Mi trayectoria' id='mi-trayectoria' />
-		<Cards client:visible />
-		<ListOfDb />
-		<Subtitles subtitle='Mi equipo de trabajo' id='mi-equipo-de-trabajo' />
-		<Subtitles subtitle='Contacto' id='contacto' />
+		<section id='mi-trayectoria'>
+			<Subtitles subtitle='Mi trayectoria' />
+			<Cards client:visible />
+		</section>
+		<section id='propuestas'>
+			<ListOfDb />
+		</section>
+		<section id='mi-equipo-de-trabajo'>
+			<Subtitles subtitle='Mi equipo de trabajo' />
+		</section>
+		<section id='section'>
+			<Subtitles subtitle='Contacto' />
+		</section>
 	</main>
 </Layout>

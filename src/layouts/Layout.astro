@@ -75,7 +75,7 @@ const { pageTitle, pageDescription } = Astro.props
 	html {
 		scrollbar-gutter: stable;
 		scroll-behavior: smooth;
-		scroll-padding-top: var(--scroll-padding-top, 40px);
+		scroll-padding-top: var(--scroll-padding-top, 55px);
 	}
 	
 	body {
@@ -188,6 +188,17 @@ const { pageTitle, pageDescription } = Astro.props
 		text-shadow: 0 0 0.5rem hsl(169, 100%, 0%);
 	}
 
+	.active-link {
+		color: hsl(169, 100%, 79%);
+		font-size: 1.175rem;
+		text-shadow: 0 0 0.1rem hsl(169, 100%, 15%);
+	}
+
+	.active-link:hover {
+		color: #fff;
+		text-shadow: 0 0 0.5rem hsl(25, 97%, 39%);
+	}
+
 	@media (max-width: 768px) {
 		html {
 			scroll-padding-top: 63px;
@@ -215,6 +226,7 @@ const { pageTitle, pageDescription } = Astro.props
 			display: block;
 		}
 	}
+	
 </style>
 
 <script>

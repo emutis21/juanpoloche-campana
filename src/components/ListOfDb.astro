@@ -6,7 +6,7 @@ import Subtitles from './Subtitles.astro'
 <aside class='flex flex-col'>
 	{
 		db.map(({ title }) => {
-			return <Subtitles subtitle={title} id='propuestas' />
+			return <Subtitles subtitle={title} />
 		})
 	}
 	<ul class='box p-0 text-center flex flex-col gap-5 text-white'>
