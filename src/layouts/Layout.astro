@@ -3,6 +3,8 @@ import { ViewTransitions } from 'astro:transitions'
 import Navbar from '../components/Navbar/Navbar.astro'
 import Sidebar from '../components/Navbar/Sidebar.astro'
 
+import '../styles/global.css'
+
 interface Props {
   pageTitle?: string
   pageDescription?: string
@@ -72,169 +74,15 @@ const { pageTitle, pageDescription } = Astro.props
 </html>
 
 <style is:global>
-	html {
-		scrollbar-gutter: stable;
-		scroll-behavior: smooth;
-		scroll-padding-top: var(--scroll-padding-top, 55px);
-	}
-	
-	body {
-		background-color: hsl(253, 76%, 30%);
-		color: #fff;
-		font-family: 'InterTight', sans-serif;
-	}
 
-	h1,
-	h2,
-	h3,
-	h5,
-	p,
-	strong {
-		text-wrap: balance;
-	}
-
-	::-webkit-scrollbar {
-		width: 0.5rem;
-		background-color: transparent;
-	}
-
-	::-webkit-scrollbar-track {
-		border-radius: 100vh;
-	}
-
-	::-webkit-scrollbar-thumb {
-		background-color: hsl(280, 100%, 30%);
-		border-radius: 100vh;
-	}
-
-	::selection {
-		background-color: hsl(280, 100%, 35%);
-		color: #fff;
-	}
-
-	@font-face {
-		font-family: 'InterTight';
-		src: url('/fonts/InterTight-Medium.ttf')
-			format('truetype');
-		font-weight: 500;
-		font-style: normal;
-		font-display: fallback;
-	}
-
-	@font-face {
-		font-family: 'InterTight-Bold';
-		src: url('/fonts/InterTight-SemiBold.ttf')
-			format('truetype');
-		font-weight: 800;
-		font-style: normal;
-		font-display: fallback;
-	}
-
-	@font-face {
-		font-family: 'InterTight-Regular';
-		src: url('/fonts/InterTight-Regular.ttf')
-			format('truetype');
-		font-weight: 400;
-		font-style: normal;
-		font-display: fallback;
-	}
-
-	@font-face {
-		font-family: 'InterTight-ExtraBold';
-		src: url('/fonts/InterTight-ExtraBoldItalic.ttf')
-			format('truetype');
-		font-weight: 900;
-		font-style: normal;
-		font-display: fallback;
-	}
-
-	.box {
-		width: 900px;
-		max-width: 98%;
-		margin: 0 auto;
-	}
-
-	@keyframes show {
-		from {
-			opacity: 0;
-			scale: 25%;
-		}
-
-		to {
-			opacity: 1;
-			scale: 100%;
-		}
-	}
-
-	img {
-		width: 100%;
-		height: auto;
-	}
-
-	img {
-		view-timeline-name: --image;
-		view-timeline-axis: block;
-
-		animation-timeline: --image;
-		animation-name: show;
-
-		animation-range: entry 25% cover 30%;
-		animation-fill-mode: both;
-	}
-
-	strong {
-		color: hsl(169, 100%, 79%);
-		font-size: 1.175rem;
-		text-shadow: 0 0 0.5rem hsl(169, 100%, 0%);
-	}
-
-	.active-link {
-		color: hsl(169, 100%, 79%);
-		font-size: 1.175rem;
-		text-shadow: 0 0 0.1rem hsl(169, 100%, 15%);
-	}
-
-	.active-link:hover {
-		color: #fff;
-		text-shadow: 0 0 0.5rem hsl(25, 97%, 39%);
-	}
-
-	@media (max-width: 768px) {
-		html {
-			scroll-padding-top: 63px;
-		}
-		
-		.navbar {
-			display: none;
-		}
-		
-		.sidebar {
-			display: block;
-		}
-
-		.box {
-			max-width: 90%;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.sidebar {
-			display: none;
-		}
-
-		.navbar {
-			display: block;
-		}
-	}
-	
 </style>
 
-<script>
-	if ('serviceWorker' in navigator) {
-		window.addEventListener('load', () => {
-			navigator.serviceWorker.register('/service-worker.js').catch((error) => {
-				console.log('Error al registrar el Service Worker:', error)
-			})
+<script src="../utils/index.js">
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('/service-worker.js').catch((error) => {
+			console.log('Error al registrar el Service Worker:', error)
 		})
-	}
+	})
+}
 </script>

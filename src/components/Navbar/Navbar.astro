@@ -22,7 +22,7 @@ import { Whatsapp } from '../Icons/Whatsapp.jsx'
 		<ul
 			class='flex items-center [&>li>a]:font-semibold [&>li>a]:inline-block [&>li>a]:uppercase [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-[0.8rem]'
 		>
-			<li><a href='/#inicio' class="active-link">Inicio</a></li>
+			<li><a href='/#inicio'>Inicio</a></li>
 			<li><a href='/#mi-trayectoria'>Mi trayectoria</a></li>
 			<li><a href='/#propuestas'>Propuestas</a></li>
 			<li><a href='/#mi-equipo-de-trabajo'>Mi equipo</a></li>
@@ -80,31 +80,8 @@ import { Whatsapp } from '../Icons/Whatsapp.jsx'
 		--_translate: 0;
 		--_scale-delay: 0ms;
 	}
-
 </style>
 
 <script>
-	const sections = document.querySelectorAll('section[id]')
 
-	function scrollActive() {
-		const scrollY = window.pageYOffset
-
-		sections.forEach((current) => {
-			const sectionHeight = (current as HTMLElement).offsetHeight
-			const sectionTop = (current as HTMLElement).offsetTop - 55
-			const sectionId = current.getAttribute('id')
-
-			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-				document
-					.querySelector('ul a[href*=' + sectionId + ']')
-					.classList.add('active-link')
-			} else {
-				document
-					.querySelector('ul a[href*=' + sectionId + ']')
-					.classList.remove('active-link')
-			}
-		})
-	}
-
-	window.addEventListener('scroll', scrollActive)
 </script>

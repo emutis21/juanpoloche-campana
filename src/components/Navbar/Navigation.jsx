@@ -32,7 +32,7 @@ const Navigation = () => {
       const scrollY = window.scrollY
       sections.forEach((current) => {
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 63
+        const sectionTop = current.offsetTop - 126
         const sectionId = current.getAttribute('id')
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           setActiveLink(sectionId)
