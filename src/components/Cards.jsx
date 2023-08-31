@@ -45,16 +45,18 @@ function CardGrid() {
             onClick={() => handleCardClick(card.title)}
             className='rounded-md mb-3 aspect-[4/3] object-cover cursor-pointer hover:brightness-110 transition-all duration-300'
           />
-          <figcaption className='flex flex-col justify-between gap-5 h-full'>
-            <h2 className='text-2xl font-semibold text-second-500'>
-              {card.title}
-            </h2>
-            <p className='text-lg font-medium text-first-900'>
-              {card.text.description}
-            </p>
+          <figcaption className='flex flex-col justify-between p-0 h-full'>
+            <div>
+              <h2 className='text-2xl pb-2 md:pb-5 font-semibold text-second-500'>
+                {card.title}
+              </h2>
+              <p className='text-lg font-medium text-first-900'>
+                {card.text.description}
+              </p>
+            </div>
 
             <div className='flex w-full flex-col self-end gap-2 h-fit bottom-0'>
-              <span className='w-full h-[1px] bg-first-100'></span>
+              <span className='w-full h-[1px] bg-first-100 my-2'></span>
 
               <Button
                 onClick={() => handleCardClick(card.title)}

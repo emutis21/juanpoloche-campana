@@ -82,33 +82,41 @@ export const cards = [
         }
       ]
     },
-    img: '/imgs/iedusaquen.webp',
+    img: '/imgs/u-la-gran-colombia.webp',
     alt: 'Estudios'
   },
   {
     id: 4,
-    title: ' Experiencia',
+    title: 'Experiencia',
     text: {
       description:
-        'La experiencia es el conocimiento que se adquiere a través de la vivencia',
+        'Mi apasionada dedicación al servicio social y el compromiso con el progreso comunitario.',
       paragraph:
-        'La experiencia es el conocimiento que se adquiere a través de la vivencia de situaciones. En este apartado encontrarás información sobre cómo adquirir experiencia, cómo organizarte, cómo participar en protestas, entre otros temas.',
+        'He encontrado una profunda pasión por el servicio social y el compromiso con el progreso de nuestra sociedad. Mi trayectoria abarca diversos ámbitos de acción, incluyendo:',
       list: [
         {
           id: 1,
-          item: '¿Qué es la experiencia?'
+          item: '<strong>Participación en la OCE:</strong> He contribuido activamente en participaciones estudiantiles, trabajando en proyectos que benefician a la comunidad estudiantil.'
         },
         {
           id: 2,
-          item: '¿Cómo adquirir experiencia?'
+          item: '<strong>Marchas por la inversión educativa:</strong> He participado en marchas organizadas por estudiantes de la Universidad Nacional, luchando por mejorar la inversión en infraestructura educativa.'
         },
         {
           id: 3,
-          item: '¿Cómo organizarte?'
+          item: '<strong>Consejeros Locales de Juventud:</strong> Nuestra gestión en proyectos de interlocución con instituciones educativas públicas nos llevó a ser elegidos como consejeros locales de juventud, avanzando en iniciativas enfocadas en el cuidado y bienestar animal.'
+        },
+        {
+          id: 4,
+          item: '<strong>Candidato a Edil:</strong> En mi búsqueda continua de servir a la comunidad, ahora me postulo como candidato a edil en la localidad de Usaquén.'
+        },
+        {
+          id: 5,
+          item: '<strong>Miembro de la Organización Internacional de Jóvenes Líderes:</strong> También formo parte de la organización internacional de jóvenes líderes, colaborando en proyectos globales para un mundo mejor.'
         }
       ]
     },
     img: '/imgs/iedusaquen.webp',
-    alt: 'IED Usaquén'
+    alt: 'Experiencia'
   }
 ]

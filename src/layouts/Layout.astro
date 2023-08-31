@@ -6,8 +6,8 @@ import Sidebar from '../components/Navbar/Sidebar.astro'
 import '../styles/global.css'
 
 interface Props {
-  pageTitle?: string
-  pageDescription?: string
+	pageTitle?: string
+	pageDescription?: string
 }
 
 const { pageTitle, pageDescription } = Astro.props
@@ -15,15 +15,15 @@ const { pageTitle, pageDescription } = Astro.props
 
 <!DOCTYPE html>
 <html lang='es'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <meta name='description' content={pageDescription} />
-    <meta name='generator' content={pageDescription} />
-    <meta name='author' content='Esteban Mutis' />
-    <meta
-      name='keywords'
-      content='política,
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta name='description' content={pageDescription} />
+		<meta name='generator' content={pageDescription} />
+		<meta name='author' content='Esteban Mutis' />
+		<meta
+			name='keywords'
+			content='política,
       noticias políticas,
       análisis político,
       elecciones,
@@ -35,54 +35,59 @@ const { pageTitle, pageDescription } = Astro.props
       debate político,
       edil,
       usaquén'
-    />
-    <meta name='theme-color' content='#301691' />
-    <title>Juan Poloche {pageTitle}</title>
-    <link rel='icon' type='image' href='/imgs/test-minilogo-transparent.webp' />
-    <link rel='manifest' href='/manifest.json' />
-    <meta name='view-transitions' content='same-origin' />
+		/>
+		<meta name='theme-color' content='#301691' />
+		<title>Juan Poloche {pageTitle}</title>
+		<link rel='icon' type='image' href='/imgs/test-minilogo-transparent.webp' />
+		<link rel='manifest' href='/manifest.json' />
+		<meta name='view-transitions' content='same-origin' />
 
-    <script>
-      window.addEventListener('load', () => {
-        const imagesToPreload = ['/imgs/bg1.webp', '/imgs/bg2.webp', '/imgs/bg3.webp']
+		<script>
+			window.addEventListener('load', () => {
+				const imagesToPreload = [
+					'/imgs/bg1.webp',
+					'/imgs/bg2.webp',
+					'/imgs/bg3.webp'
+				]
 
-        imagesToPreload.forEach((imageUrl) => {
-          const image = new Image()
-          image.src = imageUrl
-        })
-      })
-    </script>
+				imagesToPreload.forEach((imageUrl) => {
+					const image = new Image()
+					image.src = imageUrl
+				})
+			})
+		</script>
 
-    <script async src='https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ'></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'G-4HENYJB6RJ')
-    </script>
+		<script async src='https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ'
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag('js', new Date())
+			gtag('config', 'G-4HENYJB6RJ')
+		</script>
 
-    <ViewTransitions />
-  </head>
+		<ViewTransitions />
+	</head>
 
-  <body>
-    <Navbar />
-    <Sidebar />
-    <slot />
-  </body>
+	<body>
+		<Navbar />
+		<Sidebar />
+		<slot />
+
+	</body>
 </html>
 
-<style is:global>
-
-</style>
-
-<script src="../utils/index.js">
-if ('serviceWorker' in navigator) {
-	window.addEventListener('load', () => {
-		navigator.serviceWorker.register('/service-worker.js').catch((error) => {
-			console.log('Error al registrar el Service Worker:', error)
+<script src='../utils/index.js'>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker
+				.register('/service-worker.js')
+				.catch((error) => {
+					console.log('Error al registrar el Service Worker:', error)
+				})
 		})
-	})
-}
+	}
+	window.addEventListener('popstate', scrollActive)
 </script>

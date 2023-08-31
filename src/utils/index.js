@@ -39,4 +39,4 @@ function scrollActive() {
 
 window.addEventListener('load', scrollActive)
 window.addEventListener('scroll', scrollActive)
-window.addEventListener('popstate', scrollActive)
+

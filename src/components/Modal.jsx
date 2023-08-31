@@ -57,7 +57,7 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
               src={img}
               alt={alt}
               loading='lazy'
-              className='rounded-md h-full w-full md:w-1/2 aspect-[4/3] object-cover self-center'
+              className='rounded-md md:sticky md:top-0 h-full w-full md:w-1/2 aspect-[4/3] object-cover self-center'
             />
 
             <span className='w-full h-[3px] md:w-[5px] md:h-full bg-first-100 block'></span>
