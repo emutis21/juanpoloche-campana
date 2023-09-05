@@ -1,0 +1,95 @@
+@import 'Variables';
+
+html {
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+	scroll-padding-top: $scroll-padding-top;
+}
+
+body {
+	background-color: $primary-bg-color;
+	color: #fff;
+	font-family: 'InterTight', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h5,
+p,
+strong {
+	text-wrap: balance;
+}
+
+.box {
+	width: 1080px;
+	max-width: 98%;
+	margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $scrollbar-color;
+	border-radius: 100vh;
+}
+
+::selection {
+	background-color: $accent-color;
+	color: #fff;
+}
+
+@include font-face('InterTight', '/fonts/InterTight-Medium.ttf', 500);
+@include font-face('InterTight-Bold', '/fonts/InterTight-SemiBold.ttf', 800);
+@include font-face('InterTight-Regular', '/fonts/InterTight-Regular.ttf', 400);
+@include font-face(
+	'InterTight-ExtraBold',
+	'/fonts/InterTight-ExtraBoldItalic.ttf',
+	900
+);
+
+@keyframes show {
+	from {
+		opacity: 0;
+		scale: 25%;
+	}
+
+	to {
+		opacity: 1;
+		scale: 100%;
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+	view-timeline-name: --image;
+	view-timeline-axis: block;
+	animation-timeline: --image;
+	animation-name: show;
+	animation-range: entry 25% cover 30%;
+	animation-fill-mode: both;
+}
+
+strong {
+	color: $accent-color;
+	font-size: 1.175rem;
+	text-shadow: 0 0 0.5rem hsl(169, 100%, 0%);
+}
+
+@media (max-width: 768px) {
+	html {
+		scroll-padding-top: var(--scroll-padding-top, 63px);
+	}
+	
+	.box {
+		max-width: 90%;
+	}
+}

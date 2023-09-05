@@ -47,7 +47,7 @@ function CardGrid() {
           />
           <figcaption className='flex flex-col justify-between p-0 h-full'>
             <div>
-              <h2 className='text-2xl pb-2 md:pb-5 font-semibold text-second-500'>
+              <h2 className='text-2xl pb-2 md:pb-5 font-semibold text-[hsl(280,100%,35%)]'>
                 {card.title}
               </h2>
               <p className='text-lg font-medium text-first-900'>

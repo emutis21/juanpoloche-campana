@@ -75,7 +75,7 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
                 <ul className='flex flex-col gap-5 pb-8 md:pb-0'>
                   {list.map((itemObj, index) => (
                     <li key={index} className='flex w-full gap-2'>
-                      <span className='text-lg md:text-lg font-medium'>💜</span>
+                      <span className='text-lg md:text-lg font-medium'>🧡</span>
                       <p
                         className='text-lg md:text-lg'
                         dangerouslySetInnerHTML={{ __html: itemObj.item }}

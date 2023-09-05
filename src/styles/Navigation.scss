@@ -1,0 +1,86 @@
+@import 'Variables';
+
+$gap: 2rem;
+$linkBackgroundColor: hsl(25, 97%, 49%);
+$linkTranslate: 0;
+$linkScale: 0;
+$linkScaleDelay: 0ms;
+
+nav {
+	.navLinks {
+		ul {
+			--_gap: $gap;
+		}
+
+		li {
+			overflow: hidden;
+			position: relative;
+			min-inline-size: 3rem;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset-inline: 0;
+				inset-block-end: 0;
+				block-size: 100%;
+				background-color: $linkBackgroundColor;
+				border-radius: 0.375rem;
+				z-index: -1;
+				translate: var(--_translate, 0);
+				scale: var(--_scale, 0) 1;
+				transition: scale 100ms var(--_scale-delay, 0ms), translate 200ms;
+			}
+
+			&:hover ~ li {
+				--_translate: -100%;
+				--_scale-delay: 100ms;
+			}
+
+			.active-link {
+				color: $accent-color !important;
+				scale: 1.02 !important;
+				text-shadow: 0 0 0.5rem hsl(169, 100%, 0%) !important;
+				background-color: red;
+
+				&:hover {
+					color: #fff;
+					text-shadow: 0 0 0.5rem $accent-hover-color;
+				}
+			}
+		}
+
+		&:hover li {
+			--_translate: 100%;
+			--_scale-delay: 100ms;
+			color: #fff;
+		}
+
+		li:hover {
+			--_scale: 1;
+			--_translate: 0;
+			--_scale-delay: 0ms;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	nav {
+		.navLinks {
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	nav {
+		.navLinks {
+			display: none;
+		}
+	}
+
+	.mobile {
+		.navLinks {
+			display: block;
+		}
+	}
+}

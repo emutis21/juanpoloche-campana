@@ -1,9 +1,9 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
-import Navbar from '../components/Navbar/Navbar.astro'
-import Sidebar from '../components/Navbar/Sidebar.astro'
+import '../styles/global.scss'
 
-import '../styles/global.css'
+import { ViewTransitions } from 'astro:transitions'
+
+import Header from '../components/Navbar/Header'
 
 interface Props {
 	pageTitle?: string
@@ -38,7 +38,7 @@ const { pageTitle, pageDescription } = Astro.props
 		/>
 		<meta name='theme-color' content='#301691' />
 		<title>Juan Poloche {pageTitle}</title>
-		<link rel='icon' type='image' href='/imgs/test-minilogo-transparent.webp' />
+		<link rel='icon' type='image' href='/favicon-border.webp' />
 		<link rel='manifest' href='/manifest.json' />
 		<meta name='view-transitions' content='same-origin' />
 
@@ -72,14 +72,13 @@ const { pageTitle, pageDescription } = Astro.props
 	</head>
 
 	<body>
-		<Navbar />
-		<Sidebar />
+		<Header client:load />
 		<slot />
 
 	</body>
 </html>
 
-<script src='../utils/index.js'>
+<script>
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', () => {
 			navigator.serviceWorker
@@ -89,5 +88,4 @@ const { pageTitle, pageDescription } = Astro.props
 				})
 		})
 	}
-	window.addEventListener('popstate', scrollActive)
 </script>
