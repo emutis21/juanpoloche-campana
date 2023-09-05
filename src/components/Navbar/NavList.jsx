@@ -24,7 +24,7 @@ function NavList({ activeLink, closeSidebar }) {
       md:border-t-0 border-b-4 md:border-b-0 border-first-800 md:border-transparent'
     >
       <ul
-        className='flex flex-col md:flex-row text-xl font-semibold
+        className='flex flex-col md:flex-row text-xl font-normal
         md:items-center md:[&>li>a]:font-semibold md:[&>li>a]:inline-block md:[&>li>a]:uppercase md:[&>li>a]:px-4 md:[&>li>a]:text-[0.8rem]
       '
       >

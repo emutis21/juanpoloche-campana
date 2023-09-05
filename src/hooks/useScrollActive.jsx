@@ -39,8 +39,6 @@ function useScrollActive() {
     if (activeLink) {
       activeLink.classList.add('active-link')
     }
-
-    console.log(activeLink)
   }
 
   useEffect(() => {

@@ -16,7 +16,7 @@ const Sidebar = () => {
   }
 
   const closeSidebar = () => {
-    setShowSidebar(true)
+    setShowSidebar(false)
   }
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Sidebar = () => {
           }`}
         >
           <div className='flex justify-between items-center'>
-            <h3 className='text-2xl font-semibold text-second-500'>Menú</h3>
+            <h3 className='text-2xl font-semibold text-third-200'>Menú</h3>
             <div className='cursor-pointer w-[15%] self-start '>
               <Close
                 showSidebar={showSidebar}

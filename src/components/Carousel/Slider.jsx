@@ -67,7 +67,7 @@ export default function Slider() {
   }, [activeIndex])
 
   const bgIndex = wrap(0, bg.length, activeIndex)
-  const { title, description, img, number, sizes } = bg[bgIndex]
+  const { title, description, img, imgMobile, number, sizes } = bg[bgIndex]
 
   const paginate = (newDirection) => {
     setActiveIndex((prevIndex) => wrap(0, bg.length, prevIndex + newDirection))
@@ -106,6 +106,7 @@ export default function Slider() {
             sizes={sizes}
             description={description}
             img={img}
+            imgMobile={imgMobile}
             number={number}
           />
         </motion.div>

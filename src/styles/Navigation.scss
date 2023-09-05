@@ -37,7 +37,7 @@ nav {
 			}
 
 			.active-link {
-				color: $accent-color;
+				color: #94ffeb;
 				scale: 1.02;
 				text-shadow: 0 0 0.5rem hsl(169, 100%, 0%);
 
@@ -80,6 +80,23 @@ nav {
 	.mobile {
 		.navLinks {
 			display: block;
+
+			li {
+				&::after {
+					display: none;
+				}
+			}
+
+			.active-link {
+				color: $accent-color;
+				scale: 1.02;
+				text-shadow: 0 0 0.5rem hsl(169, 100%, 0%);
+
+				&:hover {
+					color: #fff;
+					text-shadow: 0 0 0.5rem $accent-hover-color;
+				}
+			}
 		}
 	}
 }
