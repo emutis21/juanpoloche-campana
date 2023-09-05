@@ -14,7 +14,7 @@ export const SliderItem = ({ img, imgMobile, sizes, title, number, description }
             duration: 2,
             x: { duration: 1 }
           }}
-          srcset={[`${imgMobile} 480w`, `${img} 800w`]}
+          srcSet={`${imgMobile} 480w, ${img} 800w`}
           sizes='(max-width: 768px) 280px'
           src={img}
           alt={description}

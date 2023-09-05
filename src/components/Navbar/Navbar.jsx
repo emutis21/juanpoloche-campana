@@ -1,8 +1,27 @@
+import { useEffect, useState } from 'react'
 import { Whatsapp } from '../Icons/Whatsapp.jsx'
 import NavList from './NavList.jsx'
-import NavigationList from './Sidebar.jsx'
+import Sidebar from './Sidebar.jsx'
 
 function Navbar() {
+  const [showSidebar, setShowSidebar] = useState(false)
+
+  const handleOutsideClick = (event) => {
+    if (showSidebar && !event.target.closest('.flex.flex-col')) {
+      setShowSidebar(false)
+    }
+  }
+
+  const closeSidebar = () => {
+    setShowSidebar(false)
+  }
+
+  useEffect(() => {
+    showSidebar && document.body.classList.add('overflow-hidden')
+    return () => {
+      document.body.classList.remove('overflow-hidden')
+    }
+  }, [showSidebar])
 
   return (
     <nav className='navbar w-full py-3 px-5 md:px-0 md:w-[90%] md:max-w-[95%] mx-auto flex justify-between h-[4rem] md:h-[3.5rem] absolute md:relative'>
@@ -26,7 +45,12 @@ function Navbar() {
           <Whatsapp />
         </button>
       </div>
-      <NavigationList />
+      <Sidebar
+        handleOutsideClick={handleOutsideClick}
+        closeSidebar={closeSidebar}
+        showSidebar={showSidebar}
+        setShowSidebar={setShowSidebar}
+      />
     </nav>
   )
 }

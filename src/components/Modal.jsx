@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Close } from './Icons/OpenClose'
 import { useEffect } from 'react'
 
-const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
+const ModalComponent = ({ isOpen, onClose, title, text, img, imgMobile, alt }) => {
   const { paragraph, list } = text
 
   const handleCloseModal = () => {
@@ -54,6 +54,8 @@ const ModalComponent = ({ isOpen, onClose, title, text, img, alt }) => {
               <Close />
             </button>
             <img
+              srcSet={`${imgMobile} 480w, ${img} 800w`}
+              sizes='(max-width: 768px) 280px'
               src={img}
               alt={alt}
               loading='lazy'

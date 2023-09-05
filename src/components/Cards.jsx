@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { cards } from '../data/cards'
+import { motion } from 'framer-motion'
 
 import ModalComponent from './Modal'
 import Button from './Button'
-import { motion } from 'framer-motion'
 
 function CardGrid() {
   const [selectedCard, setSelectedCard] = useState(null)
@@ -17,7 +17,7 @@ function CardGrid() {
   }
 
   const buttonClasses =
-    'modal-open self-end bg-first-800 hover:border-first-500 text-sm md:text-md text-white font-semibold py-2 px-4 rounded-md'
+    'modal-open self-end bg-second-600 text-white hover:border-first-500 text-sm md:text-md font-semibold py-2 px-4 rounded-md'
 
   return (
     <div
@@ -39,6 +39,8 @@ function CardGrid() {
           overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between'
         >
           <img
+            srcSet={`${card.imgMobile} 480w, ${card.img} 800w`}
+            sizes='(max-width: 768px) 280px'
             src={card.img}
             alt={card.alt}
             loading='lazy'
@@ -76,6 +78,7 @@ function CardGrid() {
           description={selectedCard.text}
           list={selectedCard.text.list}
           img={selectedCard.img}
+          imgMobile={selectedCard.imgMobile}
           alt={selectedCard.alt}
           text={selectedCard.text}
         />
