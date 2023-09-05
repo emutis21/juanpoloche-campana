@@ -37,10 +37,9 @@ nav {
 			}
 
 			.active-link {
-				color: $accent-color !important;
-				scale: 1.02 !important;
-				text-shadow: 0 0 0.5rem hsl(169, 100%, 0%) !important;
-				background-color: red;
+				color: $accent-color;
+				scale: 1.02;
+				text-shadow: 0 0 0.5rem hsl(169, 100%, 0%);
 
 				&:hover {
 					color: #fff;

@@ -7,7 +7,7 @@ import { Whatsapp } from '../Icons/Whatsapp'
 import NavList from './NavList'
 
 const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(true)
+  const [showSidebar, setShowSidebar] = useState(false)
 
   const handleOutsideClick = (event) => {
     if (showSidebar && !event.target.closest('.flex.flex-col')) {
