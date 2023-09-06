@@ -1,4 +1,4 @@
-import useScrollActive from '../../hooks/useScrollActive.jsx'
+import useScrollActive from '@hooks/useScrollActive.jsx'
 
 function NavList({ activeLink, closeSidebar }) {
   useScrollActive()

@@ -16,13 +16,6 @@ function Navbar() {
     setShowSidebar(false)
   }
 
-  useEffect(() => {
-    showSidebar && document.body.classList.add('overflow-hidden')
-    return () => {
-      document.body.classList.remove('overflow-hidden')
-    }
-  }, [showSidebar])
-
   return (
     <nav className='navbar w-full py-3 px-5 md:px-0 md:w-[90%] md:max-w-[95%] mx-auto flex justify-between h-[4rem] md:h-[3.5rem] absolute md:relative'>
       <div className='flex-grow basis-0 h-full flex'>

@@ -84,10 +84,10 @@ strong {
 }
 
 @media (max-width: 768px) {
-	html {
-		scroll-padding-top: var(--scroll-padding-top, 63px);
-	}
-	
+	// html {
+	// 	scroll-padding-top: var(--scroll-padding-top, 63px);
+	// }
+
 	.box {
 		max-width: 90%;
 	}

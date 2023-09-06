@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from 'popmotion'
-import { bg } from '../../data/bg'
+import { bg } from '@data/bg'
 import { Arrow } from '../Icons/Arrow'
 import { SliderItem } from './SliderItem'
 
