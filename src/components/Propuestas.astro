@@ -1,0 +1,31 @@
+---
+import { db } from '../data/db'
+import Subtitles from './Subtitles.astro'
+---
+
+<aside class='flex flex-col box'>
+  {
+    db.map(({ title }) => {
+      return <Subtitles subtitle={title} />
+    })
+  }
+  <ul class='p-0 flex flex-col gap-5 md:grid md:grid-cols-2'>
+    {
+      db[0].propuestas.map(({ title, subtitle, description }) => {
+        return (
+          <li class='hover:bg-first-800 transition-all hover:scale-105 w-ful gap-3 h-full border-second-500 bg-first-900/80 border-4 flex flex-col justify-between rounded-lg shadow-lg hover:shadow-2xl'>
+            <h3 class='text-lg md:text-2xl grid place-content-center font-[500] h-[30%] md:h-[35%] bg-first-500/70 font-InterTight-ExtraBold py-3 px-2 text-center border-b border-second-500 rounded-t-md'>
+              {title}
+            </h3>
+            <div class='pb-3 px-2 md:px-4 rounded-b-md'>
+              <h4 class='text-md md:text-xl font-semibold mb-2 text-white/95'>
+                {subtitle}
+              </h4>
+              <p class='text-sm md:text-base text-white/[85]'>{description}</p>
+            </div>
+          </li>
+        )
+      })
+    }
+  </ul>
+</aside>

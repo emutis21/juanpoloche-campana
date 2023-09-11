@@ -37,15 +37,12 @@ const Sidebar = ({
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
 
-  
   useEffect(() => {
     showSidebar && document.body.classList.add('overflow-hidden')
     return () => {
       document.body.classList.remove('overflow-hidden')
     }
   }, [showSidebar])
-
-  console.log(showSidebar)
 
   return (
     <div className='flex-grow basis-0 md:hidden flex justify-end relative z-40'>
