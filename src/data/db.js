@@ -25,7 +25,7 @@ export const db = [
         subtitle:
           'Así como los comercios, los emprendimientos locales también necesitan apoyo',
         description:
-          'Impulsaremos programas de capacitación y financiamiento para emprendedores locales, además de facilitar espacios para la realización de eventos culturales y artísticos en la comunidad.'
+          'Impulsaremos programas de capacitación y financiamiento para emprendedores locales, además de facilitar espacios para la realización de eventos culturales y artísticos en la comunidad, que promuevan el crecimiento de las empresas nacientes.'
       },
       {
         id: 'propuesta4',
@@ -33,7 +33,7 @@ export const db = [
         subtitle:
           'De esta manera, los jóvenes podrán desarrollar sus habilidades y talentos',
         description:
-          'Trabajaremos en la capacitación de los jóvenes, creando lugares seguros y atractivos donde los jóvenes puedan desarrollar actividades recreativas, deportivas y culturales.'
+          'Trabajaremos en la capacitación de los jóvenes, creando lugares seguros y atractivos donde estos puedan desarrollar actividades recreativas, deportivas y culturales.'
       }
     ]
   }

@@ -1,0 +1,36 @@
+---
+import { team } from '../data/team.js'
+---
+
+<article class='box'>
+  <ul class='w-full flex flex-col md:grid md:grid-cols-3 gap-3'>
+    {
+      team.map((team) => (
+        <li class='rounded-xl w-full bg-first-500 py-10 px-5 border border-second-500 text-center max-w-2xl mx-auto'>
+          <figure>
+            <picture class='w-full flex justify-center pb-5'>
+              <img
+                src={team.img}
+                alt={`foto ${team.name}`}
+                class='w-24 h-24 rounded-full object-cover drop-shadow-sm bg-first-800'
+              />
+            </picture>
+            <figcaption class='flex flex-col gap-3'>
+              <h2 class='text-2xl font-bold'>
+                {team.name} {team.lastName}
+              </h2>
+              <p>{team.position}</p>
+              <p>{team.description}</p>
+              <a
+                href={team.instagram}
+                class='py-3 px-5 w-1/2 self-center rounded-lg border bg-second-400 my-5'
+              >
+                Instagram
+              </a>
+            </figcaption>
+          </figure>
+        </li>
+      ))
+    }
+  </ul>
+</article>
