@@ -22,7 +22,7 @@ function CardGrid() {
   return (
     <div
       className='box flex flex-col md:flex-row flex-wrap md:flex-nowrap sm:grid sm:grid-cols-2 lg:grid-cols-4
-      justify-center gap-6 lg:gap-8 xl:gap-12'
+      justify-center gap-6 lg:gap-8'
     >
       {cards.map((card) => (
         <motion.figure

@@ -1,7 +1,7 @@
 export const cards = [
   {
     id: 1,
-    title: 'Activismo',
+    title: 'Compromiso',
     text: {
       description:
         'Mi profundo compromiso con el colegio Usaquén se tradujo en acciones concretas.',
