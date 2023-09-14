@@ -17,7 +17,7 @@ export const team = [
     lastName: 'Villanueva',
     position: 'Gerente de campaña',
     instagram: 'https://www.instagram.com/dianavillanueva2023/',
-    description: 'Holaaaaaaaaaaaaaaaa '
+    description: 'Hola, soy Diana Villanueva, gerente de campaña de Juan Poloche. Soy estudiante de derecho de la Universidad Nacional de Colombia, y he trabajado con Juan Poloche desde que inició su carrera política. Mi trabajo en esta campaña ha sido encargarme de la logística, de la imagen de Juan Poloche, y de la organización de los eventos de campaña.'
     // img: '/imgs/test-.webp'
     // imgMobile: '/imgs/test-bg-3-jennifer-mobile.webp',
     // sizes: 'full pt-12 md:pt-60'
@@ -28,7 +28,8 @@ export const team = [
     lastName: 'Mutis',
     position: 'Manager digital',
     instagram: 'https://instagram.com/smithmutis21?igshid=MzNlNGNkZWQ4Mg==',
-    description: 'Hola, Soy Esteban Mutis he trabajo con Juan Poloche desde que tengo memoria, viendo su crecimiento en política y sociedad. Soy estudiante de ingeniería de sistemas en la Universidad Distrital Fransisco José de Caldas. Mi trabajo en esta campaña ha sido encargarme del marketing digital, y de la imagen de Juan Poloche, para que todos los jóvenes de Bogotá lo conozcan y sepan que es la mejor opción para el edilato de Usaquén.',
+    description:
+      'Hola, Soy Esteban Mutis he trabajo con Juan Poloche desde que tengo memoria, viendo su crecimiento en política y sociedad. Soy estudiante de ingeniería de sistemas en la Universidad Distrital Fransisco José de Caldas. Mi trabajo en esta campaña ha sido encargarme del marketing digital, y de la imagen de Juan Poloche, para que todos los jóvenes de Bogotá lo conozcan y sepan que es la mejor opción para el edilato de Usaquén.',
     img: '/imgs/test-esteban-2.webp'
     // imgMobile: '/imgs/test-bg-4-1-mobile.webp',
     // sizes: '1/2 pt-16 md:pt-60'
@@ -51,7 +52,7 @@ export const team = [
     lastName: 'Gutiérrez',
     position: 'Director Logístico',
     instagram: 'https://instagram.com/juanse_24g?igshid=MzRlODBiNWFlZA==',
-    description: 'Holaaaaaaaaaaaaaaaa '
+    description: 'Hola, soy Juan Sebastián Gutiérrez, director logístico de la campaña de Juan Poloche. Soy estudiante de ingeniería de sistemas de la Universidad Distrital Fransisco José de Caldas, y he trabajado con Juan Poloche desde que inició su carrera política. Mi trabajo en esta campaña ha sido encargarme de la logística, de la imagen de Juan Poloche, y de la organización de los eventos de campaña.'
     // img: '/imgs/test-bg-4-1.webp',
     // imgMobile: '/imgs/test-bg-4-1-mobile.webp',
     // sizes: '1/2 pt-16 md:pt-60'
@@ -62,7 +63,7 @@ export const team = [
     lastName: 'Gómez',
     position: 'Diseñadora gráfica',
     instagram: 'https://www.instagram.com/javierbernal2023/',
-    description: 'Holaaaaaaaaaaaaaaaa '
+    description: 'Hola, soy Sandra Gómez, diseñadora gráfica de la campaña de Juan Poloche. Soy estudiante de diseño gráfico de la Universidad Distrital Fransisco José de Caldas, y he trabajado con Juan Poloche desde que inició su carrera política. Mi trabajo en esta campaña ha sido encargarme de la logística, de la imagen de Juan Poloche, y de la organización de los eventos de campaña.'
     // img: '/imgs/test-bg-4-1.webp',
     // imgMobile: '/imgs/test-bg-4-1-mobile.webp',
     // sizes: '1/2 pt-16 md:pt-60'
@@ -73,7 +74,18 @@ export const team = [
     lastName: 'de Gómez',
     position: 'Donador de recursos',
     instagram: 'https://www.instagram.com/javierbernal2023/',
-    description: 'Holaaaaaaaaaaaaaaaa '
+    description: 'Hola, soy Pacho de Gómez, donador de recursos de la campaña de Juan Poloche. Soy estudiante de diseño gráfico de la Universidad Distrital Fransisco José de Caldas, y he trabajado con Juan Poloche desde que inició su carrera política. Mi trabajo en esta campaña ha sido encargarme de la logística, de la imagen de Juan Poloche, y de la organización de los eventos de campaña.'
+    // img: '/imgs/test-bg-4-1.webp',
+    // imgMobile: '/imgs/test-bg-4-1-mobile.webp',
+    // sizes: '1/2 pt-16 md:pt-60'
+  },
+  {
+    id: 8,
+    name: 'Lisbeth',
+    lastName: 'Vivas',
+    position: 'Contadora de campaña',
+    instagram: 'https://www.instagram.com/javierbernal2023/',
+    description: 'Hola, soy Lisbeth Vivas, contadora de la campaña de Juan Poloche. Soy estudiante de diseño gráfico de la Universidad Distrital Fransisco José de Caldas, y he trabajado con Juan Poloche desde que inició su carrera política. Mi trabajo en esta campaña ha sido encargarme de la logística, de la imagen de Juan Poloche, y de la organización de los eventos de campaña.'
     // img: '/imgs/test-bg-4-1.webp',
     // imgMobile: '/imgs/test-bg-4-1-mobile.webp',
     // sizes: '1/2 pt-16 md:pt-60'

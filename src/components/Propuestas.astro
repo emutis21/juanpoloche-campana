@@ -3,7 +3,7 @@ import { db } from '../data/db'
 import Subtitles from './Subtitles.astro'
 ---
 
-<aside class='flex flex-col box'>
+<aside class='flex flex-col box' id='list-view'>
   {
     db.map(({ title }) => {
       return <Subtitles subtitle={title} />
@@ -13,7 +13,7 @@ import Subtitles from './Subtitles.astro'
     {
       db[0].propuestas.map(({ title, subtitle, description }) => {
         return (
-          <li class='hover:bg-first-800/60 transition-all hover:scale-105 w-ful gap-3 h-full border-second-500 bg-first-900/80 border-4 flex flex-col justify-between rounded-lg shadow-lg hover:shadow-2xl'>
+          <li class='hover:bg-first-800/60 transition-all hover:scale-[1.01] w-ful gap-3 h-full border-second-500 bg-first-900/80 border-4 flex flex-col justify-between rounded-lg shadow-lg hover:shadow-2xl'>
             <h3 class='text-xl md:text-2xl flex items-center h-[30%] md:h-[35%] bg-first-500/70 font-bold py-3 px-2 border-b border-second-500 rounded-t-md'>
               {title}
             </h3>
@@ -29,3 +29,33 @@ import Subtitles from './Subtitles.astro'
     }
   </ul>
 </aside>
+
+<style>
+  @keyframes animate-in {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animate-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  #list-view li {
+    animation: animate-in linear forwards, animate-out linear forwards;
+    animation-timeline: view();
+    animation-range: entry, exit;
+  }
+</style>

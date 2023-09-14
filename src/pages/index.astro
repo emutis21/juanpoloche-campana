@@ -5,24 +5,27 @@ import Hero from '../components/Carousel/Hero.jsx'
 import Layout from '../layouts/Layout.astro'
 import Cards from '../components/Cards.jsx'
 import Team from 'src/components/Team.astro'
+import Header from 'src/components/Navbar/Header'
 ---
 
 <Layout pageTitle='| Inicio' pageDescription='Presentación Juan Poloche'>
-	<main>
-		<Hero client:load />
-		<section id='mi-trayectoria'>
-			<Subtitles subtitle='Mi trayectoria' />
-			<Cards client:visible />
-		</section>
-		<section id='propuestas'>
-			<ListOfDb />
-		</section>
-		<section id='mi-equipo-de-trabajo'>
-			<Subtitles subtitle='Mi equipo de trabajo' />
-			<Team />
-		</section>
-		<section id='contacto'>
-			<Subtitles subtitle='Contacto' />
-		</section>
-	</main>
+  <Header client:load />
+
+  <main>
+    <Hero client:load />
+    <section id='mi-trayectoria'>
+      <Subtitles subtitle='Mi trayectoria' />
+      <Cards client:visible />
+    </section>
+    <section id='propuestas'>
+      <ListOfDb />
+    </section>
+    <section id='mi-equipo-de-trabajo'>
+      <Subtitles subtitle='Mi equipo de trabajo' />
+      <Team />
+    </section>
+    <section id='contacto'>
+      <Subtitles subtitle='Contacto' />
+    </section>
+  </main>
 </Layout>
