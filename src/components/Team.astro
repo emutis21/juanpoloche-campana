@@ -4,16 +4,20 @@ import { Instagram } from './Icons/Instagram'
 ---
 
 <article class='box'>
-  <ul class='w-full flex flex-col md:grid md:grid-cols-3 gap-3'>
+  <ul
+    class='w-full flex flex-col md:grid md:grid-cols-3 gap-3 md:place-items-center'
+  >
     {
-      team.map((team) => (
+      team.map((team, id) => (
         <li class='rounded-xl w-full bg-first-600 py-7 px-5 border-4 border-first-500 text-center max-w-2xl mx-auto'>
           <figure>
             <picture class='w-full flex justify-center pb-5'>
               <img
                 src={team.img}
                 alt={`foto ${team.name}`}
-                class='w-32 h-32 rounded-full object-cover drop-shadow-sm bg-first-800'
+                class='w-32 h-32 rounded-full object-cover drop-shadow-sm bg-first-800 tooltip-button'
+                id='button'
+                aria-describedby={`tooltip-${id}`}
               />
             </picture>
             <figcaption class='flex flex-col gap-1'>
@@ -21,7 +25,11 @@ import { Instagram } from './Icons/Instagram'
                 {team.name} {team.lastName}
               </h2>
               <p class='text-xl text-white/95'>{team.position}</p>
-              <p class='texto whitespace-nowrap overflow-hidden text-ellipsis py-5 text-left'>
+              <p
+                id='texto'
+                aria-describedby='tooltip'
+                class='whitespace-nowrap overflow-hidden text-ellipsis py-5 text-left'
+              >
                 {team.description}
               </p>
               <a
@@ -30,6 +38,18 @@ import { Instagram } from './Icons/Instagram'
               >
                 <Instagram />
               </a>
+
+              <div
+                id={`tooltip-${id}`}
+                role='tooltip'
+                class='tooltip hidden w-max max-w-[90%] md:max-w-2xl absolute text-left top-0 left-0 bg-second-400 text-first-800 font-semibold py-6 px-4 rounded-md text-base z-30'
+              >
+                {team.description}
+                <div
+                  id='arrow'
+                  class='absolute bg-second-400 w-2 h-2 transform rotate-45 arrow'
+                />
+              </div>
             </figcaption>
           </figure>
         </li>
@@ -39,12 +59,71 @@ import { Instagram } from './Icons/Instagram'
 </article>
 
 <script>
-  const texto = document.querySelectorAll('.texto')
-  texto.forEach((text) => {
-    text.addEventListener('click', () => {
-      text.classList.toggle('whitespace-normal')
-        ? text.classList.remove('whitespace-nowrap')
-        : text.classList.add('whitespace-nowrap')
+  import { computePosition, flip, shift, offset, arrow } from '@floating-ui/dom'
+
+  const buttons = document.querySelectorAll('.tooltip-button')
+  const tooltips = document.querySelectorAll('.tooltip')
+  const arrowElements = document.querySelectorAll('.arrow')
+
+  const buttonArray = Array.from(buttons) as HTMLElement[]
+  const tooltipArray = Array.from(tooltips) as HTMLElement[]
+  const arrowArray = Array.from(arrowElements) as HTMLElement[]
+
+  function update(index: number): void {
+    computePosition(buttonArray[index], tooltipArray[index], {
+      placement: 'top',
+      middleware: [
+        offset(6),
+        flip(),
+        shift({ padding: 5 }),
+        arrow({ element: arrowArray[index] })
+      ]
+    }).then(({ x, y, placement, middlewareData }) => {
+      Object.assign(tooltipArray[index].style, {
+        left: `${x}px`,
+        top: `${y}px`
+      })
+
+      const { x: arrowX, y: arrowY } = middlewareData.arrow
+      const staticSide = {
+        top: 'bottom',
+        right: 'left',
+        bottom: 'top',
+        left: 'right'
+      }[placement.split('-')[0]]
+
+      Object.assign(arrowArray[index].style, {
+        left: arrowX != null ? `${arrowX}px` : '',
+        top: arrowY != null ? `${arrowY}px` : '',
+        right: '',
+        bottom: '',
+        [staticSide]: '-4px'
+      })
+    })
+  }
+
+  function showTooltip(index: number): void {
+    if (tooltipArray[index]) {
+      tooltipArray[index].style.display = 'block'
+      update(index)
+    }
+  }
+
+  function hideTooltip(index: number): void {
+    if (tooltipArray[index]) {
+      tooltipArray[index].style.display = ''
+    }
+  }
+
+  buttonArray.forEach((button, index) => {
+    ;['mouseenter', 'mouseleave', 'focus', 'blur'].forEach((event) => {
+      button.addEventListener(event, () => {
+        if (event === 'mouseenter' || event === 'focus') {
+          showTooltip(index)
+        } else if (event === 'mouseleave' || event === 'blur') {
+          hideTooltip(index)
+        }
+      })
     })
   })
 </script>
