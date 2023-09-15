@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	background-color: $primary-bg-color;
+	background: linear-gradient($gradient-colors);
 	color: #fff;
 	font-family: 'InterTight', sans-serif;
 }
@@ -16,7 +16,6 @@ h1,
 h2,
 h3,
 h5,
-p,
 strong {
 	text-wrap: balance;
 }
@@ -29,7 +28,7 @@ strong {
 
 ::-webkit-scrollbar {
 	width: 0.5rem;
-	background-color: transparent;
+	background-color: $primary-bg-color;
 }
 
 ::-webkit-scrollbar-track {

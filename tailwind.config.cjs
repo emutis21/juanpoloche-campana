@@ -52,7 +52,4 @@ module.exports = {
 			}
 		}
 	},
-	daisyui: {
-		themes: []
-	}
 }
