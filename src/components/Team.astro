@@ -28,9 +28,10 @@ import { Instagram } from './Icons/Instagram'
               <div
                 id='texto'
                 aria-describedby='tooltip'
-                class='[&>p]:whitespace-nowrap [&>p]:overflow-hidden [&>p]:text-ellipsis py-5 text-left'
+                class='[&>p]:whitespace-nowrap [&>p]:overflow-hidden [&>p]:text-ellipsis py-5 text-left texto'
                 set:html={team.description[0]}
               />
+
               <a
                 href={team.instagram}
                 class='self-center w-12 p-0 active:translate-y-[1px] active:translate-x-[1px] logo'
@@ -41,7 +42,7 @@ import { Instagram } from './Icons/Instagram'
               <div
                 id={`tooltip-${id}`}
                 role='tooltip'
-                class='tooltip hidden w-max max-w-[93%] md:max-w-2xl absolute text-left top-0 left-0 border-4 border-second-500 bg-white text-first-900 font-semibold p-4 rounded-md text-base z-30'
+                class='tooltip shadow-2xl shadow-black hidden w-max max-w-[93%] md:max-w-2xl absolute text-left top-0 left-0 border-4 border-second-500 bg-white text-first-900 font-semibold p-4 rounded-md text-base z-30'
               >
                 <div set:html={team.description} />
                 <div
@@ -59,43 +60,25 @@ import { Instagram } from './Icons/Instagram'
 
 <style lang='scss'>
   .logo {
-    animation: linear animate-color;
+    animation: ease-in animate-color;
     animation-timeline: view();
-    /* color: #ffc301; */
+    //  color: #ffc301;
   }
   @keyframes animate-color {
     0% {
-      color: #feae01;
+      color: hsl(41, 99%, 50%);
     }
-    10% {
-      color: #ffbc01;
-    }
-    20% {
-      color: #ff0b5d;
-    }
-    30% {
-      color: #fe0060;
-    }
-    40% {
-      color: #fd01c6;
+    25% {
+      color: hsl(169, 100%, 59%);
     }
     50% {
-      color: #e304e3;
+      color: hsl(169, 100%, 79%);
     }
-    60% {
-      color: #fff;
-    }
-    70% {
-      color: #ff0785;
-    }
-    80% {
-      color: #ee01db;
-    }
-    90% {
-      color: #db05e3;
+    75% {
+      color: hsl(169, 100%, 59%);
     }
     100% {
-      color: #fff;
+      color: hsl(44, 100%, 30%);
     }
   }
 </style>

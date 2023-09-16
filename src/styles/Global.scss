@@ -29,6 +29,7 @@ strong {
 ::-webkit-scrollbar {
 	width: 0.5rem;
 	background-color: $primary-bg-color;
+	border-radius: 100vh;
 }
 
 ::-webkit-scrollbar-track {

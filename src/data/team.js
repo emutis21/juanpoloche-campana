@@ -75,15 +75,15 @@ export const team = [
   },
   {
     id: 7,
-    name: 'Pacho',
-    lastName: 'de Gómez',
+    name: 'Nelson',
+    lastName: 'Torres González',
     position: 'Donador de recursos',
     instagram: 'https://www.instagram.com/javierbernal2023/',
     description: [
-      '<p>Hola, soy Pacho de Gómez, donador de recursos de la campaña de Juan Poloche. Soy estudiante de diseño gráfico de la Universidad Distrital Fransisco José de Caldas, y he trabajado con Juan Poloche desde que inició su carrera política.</p>',
-      '<p>Mi trabajo en esta campaña ha sido encargarme de la logística, de la imagen de Juan Poloche, y de la organización de los eventos de campaña.</p>'
-    ]
-    // img: '/imgs/test-bg-4-1.webp',
+      '<p>Soy Nelson Torres González, chef de 39 años de Boyacá, con una familia hermosa. Residí en Usaquén durante mi vida adulta, y quiero que siga siendo un lugar feliz y tranquilo.</p>',
+      '<p>Confío en Juan Poloche, un joven lleno de energía y buenas intenciones que conozco desde su infancia. Ayudó a sus padres en negocios locales, comprendiendo las necesidades de los comerciantes. Quiero respaldar a Juan en su esfuerzo por conectar a los comerciantes y residentes de Usaquén con políticas beneficiosas para todos.</p>'
+    ],
+    img: '/imgs/test-pacho-1.webp'
   },
   {
     id: 8,
