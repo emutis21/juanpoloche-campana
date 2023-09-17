@@ -5,14 +5,14 @@ import { Instagram } from './Icons/Instagram'
 
 <article class='box'>
   <ul
-    class='w-full flex flex-col md:grid md:grid-cols-3 gap-3 md:place-items-center'
+    class='w-full flex flex-col sm:grid  sm:grid-cols-2 md:grid-cols-3 gap-3 sm:place-items-center'
   >
     {
       team.map((team, id) => (
         <li
           class='rounded-xl w-full bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 [&>figure>picture>img]:hover:scale-105
         border-first-400 hover:border-first-300 hover:bg-first-600/50 transition-colors [&>figure>figcaption>button]:hover:bg-second-500 duration-300 text-center
-          max-w-2xl mx-auto'
+          max-w-2xl mx-auto [&>figure>figcaption>a]:hover:bg-first-950/50'
         >
           <figure class='gap-5 flex flex-col'>
             <picture class='w-full flex justify-center'>
@@ -25,7 +25,7 @@ import { Instagram } from './Icons/Instagram'
               />
             </picture>
             <figcaption class='flex flex-col gap-1'>
-              <h2 class='text-2xl font-extrabold text-third-400'>
+              <h2 class='text-2xl font-extrabold text-third-400 overflow-hidden text-ellipsis whitespace-nowrap'>
                 {team.name} {team.lastName}
               </h2>
               <p class='text-xl text-white/95'>{team.position}</p>
@@ -41,7 +41,7 @@ import { Instagram } from './Icons/Instagram'
 
               <a
                 href={team.instagram}
-                class='self-center w-12 p-0 active:translate-y-[1px] active:translate-x-[1px] logo'
+                class='self-center w-[3.5rem] p-1 hover:p-0 transition-all duration-75 rounded-full active:translate-y-[1px] active:translate-x-[1px] logo'
               >
                 <Instagram />
               </a>

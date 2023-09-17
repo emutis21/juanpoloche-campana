@@ -69,13 +69,21 @@ buttonArray.forEach((button, index) => {
 })
 
 textoArray.forEach((texto, index) => {
-  ;['mouseenter', 'mouseleave', 'focus', 'blur'].forEach((event) => {
-    texto.addEventListener(event, () => {
-      if (event === 'mouseenter' || event === 'focus') {
-        showTooltip(index)
-      } else if (event === 'mouseleave' || event === 'blur') {
-        hideTooltip(index)
-      }
-    })
-  })
+	texto.addEventListener('click', () => {
+		showTooltip(index)
+	})
 })
+
+// ahora crearemos un evento que nos permita saber si se hace click fuera del tooltip cuando
+// este está abierto, para que se cierre, solamente si el tooltip es true
+if (tooltipArray[1]) {
+	document.addEventListener('click', (e) => {
+		if (tooltipArray[1].style.display === 'block') {
+			if (e.target !== tooltipArray[0] && e.target !== buttonArray[0]) {
+				hideTooltip(0)
+				console.log('click fuera');
+				
+			}
+		}
+	})
+}
