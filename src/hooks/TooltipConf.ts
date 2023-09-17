@@ -68,8 +68,6 @@ buttonArray.forEach((button, index) => {
 	})
 })
 
-// ahora vamos a hacer que cuando se haga hover sobre los textos
-// se active el buttonArray también
 textoArray.forEach((texto, index) => {
   ;['mouseenter', 'mouseleave', 'focus', 'blur'].forEach((event) => {
     texto.addEventListener(event, () => {
