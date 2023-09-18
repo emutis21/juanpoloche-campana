@@ -38,22 +38,6 @@ const { pageTitle, pageDescription } = Astro.props
     <link rel='manifest' href='/manifest.json' />
     <meta name='view-transitions' content='same-origin' />
 
-    <script>
-      window.addEventListener('load', () => {
-        const imagesToPreload = [
-          '/imgs/test-bg-1.webp',
-          '/imgs/test-bg-2-1.webp',
-          '/imgs/test-bg-3-jennifer-mobile.webp',
-          '/imgs/test-bg-4-1-mobile.webp'
-        ]
-
-        imagesToPreload.forEach((imageUrl) => {
-          const image = new Image()
-          image.src = imageUrl
-        })
-      })
-    </script>
-
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ'
     ></script>
     <script>

@@ -30,8 +30,8 @@ export const cards = [
         }
       ]
     },
-    img: '/imgs/iedusaquen.webp',
-    imgMobile: '/imgs/iedusaquen-mobile.webp',
+    img: '/imgs/cards/iedusaquen.webp',
+    imgMobile: '/imgs/cards/iedusaquen-mobile.webp',
     alt: 'IED Usaquén'
   },
   {
@@ -61,8 +61,8 @@ export const cards = [
         }
       ]
     },
-    img: '/imgs/cacerolazo.webp',
-    imgMobile: '/imgs/cacerolazo-mobile.webp',
+    img: '/imgs/cards/cacerolazo.webp',
+    imgMobile: '/imgs/cards/cacerolazo-mobile.webp',
     alt: 'Participación'
   },
   {
@@ -84,8 +84,8 @@ export const cards = [
         }
       ]
     },
-    img: '/imgs/u-la-gran-colombia.webp',
-    imgMobile: '/imgs/u-la-gran-colombia-mobile.webp',
+    img: '/imgs/cards/u-la-gran-colombia.webp',
+    imgMobile: '/imgs/cards/u-la-gran-colombia-mobile.webp',
     alt: 'Estudios'
   },
   {
@@ -119,8 +119,8 @@ export const cards = [
         }
       ]
     },
-    img: '/imgs/iedusaquen.webp',
-    imgMobile: '/imgs/iedusaquen-mobile.webp',
+    img: '/imgs/cards/iedusaquen.webp',
+    imgMobile: '/imgs/cards/iedusaquen-mobile.webp',
     alt: 'Experiencia'
   }
 ]

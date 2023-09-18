@@ -10,16 +10,16 @@ import { Instagram } from './Icons/Instagram'
     {
       team.map((team, id) => (
         <li
-          class='picture rounded-xl w-full bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 [&>figure>picture>img]:hover:scale-105
+          class='picture relative rounded-xl w-full bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 group
         border-first-400 hover:border-first-300 hover:bg-first-600/50 transition-all [&>figure>figcaption>button]:hover:bg-second-500 duration-75 text-center
           max-w-2xl mx-auto [&>figure>figcaption>a]:hover:bg-first-950/50 hover:shadow-[rgba(224,_75,_0,_0.6)_0px_0px_20px]'
         >
           <figure class='gap-5 flex flex-col'>
-            <picture class='self-center justify-center w-32 h-32 cursor-pointer overflow-hidden bg-first-900 rounded-full'>
+            <picture class='self-center justify-center w-fit h-fit cursor-pointer overflow-hidden bg-first-900 rounded-full'>
               <img
                 src={team.img}
-                alt={`foto ${team.name}`}
-                class='transition-transform w-full h-full scale-100 rounded-full duration-75 object-cover drop-shadow-sm tooltip-button'
+                alt={`Miemro del equipo ${team.name}`}
+                class='transition-all w-32 h-32 scale-100 group-hover:scale-105 rounded-full duration-100 object-cover drop-shadow-sm tooltip-button'
                 id='button'
                 aria-describedby={`tooltip-${id}`}
               />
@@ -28,7 +28,9 @@ import { Instagram } from './Icons/Instagram'
               <h2 class='text-2xl font-extrabold text-third-400 overflow-hidden text-ellipsis whitespace-nowrap'>
                 {team.name} {team.lastName}
               </h2>
-              <p class='text-xl text-white/95'>{team.position}</p>
+              <h3 class='text-xl text-white/95 overflow-hidden text-ellipsis whitespace-nowrap'>
+                {team.position}
+              </h3>
               <div
                 id='texto'
                 aria-describedby='tooltip'
@@ -45,8 +47,10 @@ import { Instagram } from './Icons/Instagram'
               </button>
 
               <a
+                target='_blank'
                 href={team.instagram}
-                class='self-center w-[3.5rem] p-1 hover:p-[2px] transition-all rounded-full active:translate-y-[1px] active:translate-x-[1px] logo'
+                class='self-center w-[3.5rem] p-1 hover:p-[2px] transition-all duration-75 rounded-full active:translate-y-[1px] active:translate-x-[1px] logo'
+                aria-label={`Instagram de ${team.name}`}
               >
                 <Instagram />
               </a>

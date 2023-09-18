@@ -9,25 +9,6 @@ import { motion } from 'framer-motion'
 import { useDimensions } from '@hooks/useDimensions'
 import NavList from './NavList'
 
-const variables = {
-  open: {
-    x: 0,
-    transition: {
-      type: 'linear',
-      stiffness: 20,
-      restDelta: 2
-    }
-  },
-  closed: {
-    x: -300,
-    transition: {
-      type: 'spring',
-      stiffness: 400,
-      damping: 40
-    }
-  }
-}
-
 const Sidebar = ({
   handleOutsideClick,
   showSidebar,
@@ -49,6 +30,7 @@ const Sidebar = ({
       <button
         onClick={() => setShowSidebar(!showSidebar)}
         className='cursor-pointer flex bg-second-600 rounded w-10'
+        aria-label='Abrir menú'
       >
         <Open />
       </button>
@@ -91,6 +73,7 @@ const Sidebar = ({
           <NavList closeSidebar={closeSidebar} />
           <div className='flex content-between h-[1.725rem]'>
             <a
+              target='_blank'
               href='https://www.facebook.com/profile.php?id=100094611160568'
               className='flex-1 p-0'
               aria-label='Facebook'
@@ -98,13 +81,19 @@ const Sidebar = ({
               <Facebook />
             </a>
             <a
+              target='_blank'
               href='https://www.instagram.com/juanpolocheq/'
               className='flex-1 p-0'
               aria-label='Instagram'
             >
               <Instagram />
             </a>
-            <a href='#' className='flex-1 p-0' aria-label='Whatsapp'>
+            <a
+              target='_blank'
+              href='#'
+              className='flex-1 p-0'
+              aria-label='Whatsapp'
+            >
               <Whatsapp />
             </a>
           </div>

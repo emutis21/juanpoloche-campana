@@ -1,15 +1,5 @@
 {
-  "name": "jdpportfolio",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
+  " dependencies": {
     "@astrojs/react": "^2.2.1",
     "@astrojs/tailwind": "^4.0.0",
     "@astrojs/vercel": "^3.8.1",
@@ -39,5 +29,15 @@
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "0.5.4",
     "sass": "^1.66.1"
-  }
+  },
+  "name": "jdpportfolio",
+  "scripts": {
+    "astro": "astro",
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "type": "module",
+  "version": "0.0.1"
 }

@@ -1,17 +1,17 @@
 {
-  "name": "Juan David Poloche",
-  "short_name": "Juan Poloche",
-  "description": "Landing page de Juan Poloche",
-  "start_url": "/",
-  "display": "standalone",
   "background_color": "#301691",
-  "theme_color": "#301691",
+  "description": "Landing page de Juan Poloche",
+  "display": "standalone",
   "icons": [
     {
-      "src": "/favicon.png",
+      "purpose": "any maskable",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/favicon.png",
+      "type": "image/png"
     }
-  ]
+  ],
+  "name": "Juan David Poloche",
+  "short_name": "Juan Poloche",
+  "start_url": "/",
+  "theme_color": "#301691"
 }
