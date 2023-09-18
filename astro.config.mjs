@@ -23,9 +23,11 @@ export default defineConfig({
 			}
 		}
 	],
-	experimental: {
-		viewTransitions: true
+	// si el usuario va a la ruta /propuestas, lo redirigimos a /#propuestas
+	redirects: {
+		'/propuestas': '/'
 	},
+
 	output: 'server',
 	adapter: vercel()
 })

@@ -3,37 +3,37 @@ import Layout from '../layouts/Layout.astro'
 import { Title } from '../components/Title'
 ---
 
-<Layout pageTitle='404, no lo he encontrado'>
-	<section class='h-[80vh] grid place-items-center w-[90%] mx-auto'>
-		<div
-			class='text-center flex flex-col gap-16 bg-first-800 p-[5rem] rounded-xl'
-		>
-			<Title />
-			<h2 class='text-5xl md:text-5xl font-extrabold text-red-500 mb-3 md:mb-5'>
-				404
-			</h2>
-			<h3 class='text-xl md:text-xl font-semibold text-red-50'>
-				No encontro la página buscada. Esto puede ser porque:
-			</h3>
-			<ul
-				class='[&>li>p]:md:text-lg [&>li>p]:text-lg [&>li>p]:font-semibold [&>li>p]:text-first-50'
-			>
-				<li>
-					<p>Hay un error en la URL del navegador</p>
-				</li>
-				<li>
-					<p>Ó</p>
-				</li>
-				<li>
-					<p>La página buscada cambió de ubicación o fue eliminada.</p>
-				</li>
-			</ul>
-			<p class='text-lg md:text-lg text-first-50'>
-				Para volver a la página de inicio <a
-					href='/'
-					class='text-first-300 font-semibold'>clic aquí</a
-				>.
-			</p>
-		</div>
-	</section>
+<Layout pageTitle='| 404, no lo he encontrado'>
+  <section class='h-[100vh] grid place-items-center w-[90%] mx-auto'>
+    <article
+      class='text-center flex flex-col justify-center items-center gap-16 bg-first-800/20 border-white border-2 p-[5rem] rounded-xl'
+    >
+      <Title />
+      <h2 class='text-5xl md:text-5xl font-extrabold text-red-500 mb-3 md:mb-5'>
+        404
+      </h2>
+      <h3 class='text-xl md:text-xl font-semibold text-red-50'>
+        No encontro la página buscada. Esto puede ser porque:
+      </h3>
+      <ul
+        class='[&>li>p]:md:text-lg [&>li>p]:text-lg [&>li>p]:font-semibold [&>li>p]:text-first-50'
+      >
+        <li>
+          <p>Hay un error en la URL del navegador</p>
+        </li>
+        <li>
+          <p>Ó</p>
+        </li>
+        <li>
+          <p>La página buscada cambió de ubicación o fue eliminada.</p>
+        </li>
+      </ul>
+      <p class='text-lg md:text-lg text-first-50'>
+        Para volver a la página de inicio <a
+          href='/'
+          class='text-first-300 font-semibold'>clic aquí</a
+        >.
+      </p>
+    </article>
+  </section>
 </Layout>

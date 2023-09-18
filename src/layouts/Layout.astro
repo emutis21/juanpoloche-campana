@@ -36,7 +36,6 @@ const { pageTitle, pageDescription } = Astro.props
     <title>Juan Poloche {pageTitle}</title>
     <link rel='icon' type='image' href='/favicon-border.webp' />
     <link rel='manifest' href='/manifest.json' />
-    <meta name='view-transitions' content='same-origin' />
 
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ'
     ></script>
@@ -52,17 +51,16 @@ const { pageTitle, pageDescription } = Astro.props
 
   <body>
     <slot />
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .catch((error) => {
+              console.log('Error al registrar el Service Worker:', error)
+            })
+        })
+      }
+    </script>
   </body>
 </html>
-
-<script>
-	if ('serviceWorker' in navigator) {
-		window.addEventListener('load', () => {
-			navigator.serviceWorker
-				.register('/service-worker.js')
-				.catch((error) => {
-					console.log('Error al registrar el Service Worker:', error)
-				})
-		})
-	}
-</script>
