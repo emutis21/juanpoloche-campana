@@ -60,7 +60,7 @@ const ModalComponent = ({
             >
               <Close />
             </button>
-            <div className='overflow-y-auto flex flex-col items-center justify-between gap-2 md:flex-row relative md:items-start px-5'>
+            <div className='img overflow-y-auto flex flex-col items-center justify-between gap-2 md:flex-row relative md:items-start px-5'>
               <picture className='md:w-[45%] w-full h-full md:sticky md:top-0 self-center'>
                 <img
                   srcSet={`${imgMobile} 480w, ${img} 800w`}
@@ -68,7 +68,7 @@ const ModalComponent = ({
                   src={img}
                   alt={alt}
                   loading='lazy'
-                  className='img rounded-md aspect-[1/1] max-h-[300px] w-full h-full object-cover self-center'
+                  className='rounded-md aspect-[1/1] max-h-[300px] w-full h-full object-cover self-center'
                 />
               </picture>
 

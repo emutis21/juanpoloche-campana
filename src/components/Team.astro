@@ -15,12 +15,12 @@ import { Instagram } from './Icons/Instagram'
           max-w-2xl mx-auto [&>figure>figcaption>a]:hover:bg-first-950/50 hover:shadow-[rgba(224,_75,_0,_0.6)_0px_0px_20px]'
         >
           <figure class='gap-5 flex flex-col'>
-            <picture class='self-center transition-all justify-center w-fit h-fit cursor-pointer overflow-hidden bg-first-900 rounded-full'>
+            <picture class='img self-center transition-all justify-center w-fit h-fit cursor-pointer overflow-hidden bg-first-900 rounded-full'>
               <img
                 src={team.img}
                 alt={`Miemro del equipo ${team.name}`}
                 loading='lazy'
-                class='img transition-all w-[8rem] h-[8rem] group-hover:scale-105 rounded-full duration-100 object-cover drop-shadow-sm tooltip-button'
+                class='transition-all w-[8rem] h-[8rem] group-hover:scale-105 rounded-full duration-100 object-cover drop-shadow-sm tooltip-button'
                 id='button'
                 aria-describedby={`tooltip-${id}`}
               />
