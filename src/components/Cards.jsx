@@ -45,7 +45,7 @@ function CardGrid() {
             alt={card.alt}
             loading='lazy'
             onClick={() => handleCardClick(card.title)}
-            className='rounded-md mb-3 aspect-[4/3] object-cover cursor-pointer hover:brightness-110 transition-all duration-300'
+            className='img rounded-md mb-3 aspect-[4/3] object-cover cursor-pointer hover:brightness-110 transition-all duration-300'
           />
           <figcaption className='flex flex-col justify-between p-0 h-full'>
             <div>

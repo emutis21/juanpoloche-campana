@@ -68,7 +68,7 @@ const ModalComponent = ({
                   src={img}
                   alt={alt}
                   loading='lazy'
-                  className='rounded-md aspect-[1/1] max-h-[300px] w-full h-full object-cover self-center'
+                  className='img rounded-md aspect-[1/1] max-h-[300px] w-full h-full object-cover self-center'
                 />
               </picture>
 

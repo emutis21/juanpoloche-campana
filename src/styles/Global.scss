@@ -35,7 +35,7 @@ strong {
 }
 
 ::-webkit-scrollbar-track {
-	border-radius: 100vh;
+	background-color: $primary-bg-color;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -69,7 +69,7 @@ strong {
 	}
 }
 
-img {
+.img {
 	width: 100%;
 	height: auto;
 	view-timeline-name: --image;

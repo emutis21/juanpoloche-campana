@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Whatsapp } from '../Icons/Whatsapp.jsx'
+import { useState } from 'react'
+import { Whatsapp } from '../Icons/Whatsapp'
 import NavList from './NavList.jsx'
 import Sidebar from './Sidebar.jsx'
 
@@ -21,7 +21,7 @@ function Navbar() {
       <div className='flex-grow basis-0 h-full flex'>
         <a
           href='/#inicio'
-          className='flex gap-3 w-full h-full hover:scale-x-[1.01] transition-all duration-75'
+          className='flex gap-3 w-fit h-full hover:scale-x-[1.01] transition-all duration-75'
         >
           <img
             src='/imgs/test-3.webp'

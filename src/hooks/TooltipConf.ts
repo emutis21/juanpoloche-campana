@@ -21,7 +21,7 @@ const pictureArray = Array.from(pictures) as HTMLElement[]
 
 function update(index: number): void {
 	computePosition(buttonArray[index], tooltipArray[index], {
-		placement: 'bottom',
+		placement: 'top',
 		middleware: [
 			offset(6),
 			flip(),
@@ -88,11 +88,6 @@ function showTooltip(index: number): void {
 		pictureArray[index].style.zIndex = '52'
 		pictureArray[index].style.pointerEvents = 'none'
 		update(index)
-	}
-}
-
-function hideTooltip(index: number): void {
-	if (isTooltipOpen(index)) {
 	}
 }
 
