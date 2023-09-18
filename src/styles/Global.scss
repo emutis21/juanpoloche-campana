@@ -5,7 +5,9 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: $scroll-padding-top;
 }
-
+.z-70 {
+	z-index: 1270;
+}
 body {
 	background: linear-gradient($gradient-colors);
 	color: #fff;
@@ -28,7 +30,7 @@ strong {
 
 ::-webkit-scrollbar {
 	width: 0.5rem;
-	background-color: $primary-bg-color;
+	background-color: transparent;
 	border-radius: 100vh;
 }
 
@@ -81,6 +83,11 @@ img {
 strong {
 	color: $accent-color;
 	font-size: 1.175rem;
+}
+
+.logo {
+	animation: ease-in-out animate-color;
+	animation-timeline: view();
 }
 
 @media (max-width: 768px) {

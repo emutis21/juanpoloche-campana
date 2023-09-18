@@ -1,14 +1,23 @@
-import { computePosition, flip, shift, offset, arrow } from '@floating-ui/dom'
+import {
+	computePosition,
+	flip,
+	shift,
+	offset,
+	arrow,
+	limitShift
+} from '@floating-ui/dom'
 
 const buttons = document.querySelectorAll('.tooltip-button')
 const tooltips = document.querySelectorAll('.tooltip')
 const arrowElements = document.querySelectorAll('.arrow')
 const textos = document.querySelectorAll('.texto')
+const pictures = document.querySelectorAll('.picture')
 
 const buttonArray = Array.from(buttons) as HTMLElement[]
 const tooltipArray = Array.from(tooltips) as HTMLElement[]
 const arrowArray = Array.from(arrowElements) as HTMLElement[]
 const textoArray = Array.from(textos) as HTMLElement[]
+const pictureArray = Array.from(pictures) as HTMLElement[]
 
 function update(index: number): void {
 	computePosition(buttonArray[index], tooltipArray[index], {
@@ -16,7 +25,13 @@ function update(index: number): void {
 		middleware: [
 			offset(6),
 			flip(),
-			shift({ padding: 5 }),
+			shift({
+				padding: 5,
+				crossAxis: true,
+				limiter: limitShift({
+					crossAxis: true
+				})
+			}),
 			arrow({ element: arrowArray[index] })
 		]
 	}).then(({ x, y, placement, middlewareData }) => {
@@ -43,28 +58,47 @@ function update(index: number): void {
 	})
 }
 
+function isTooltipOpen(index: number): boolean {
+	const tooltip = tooltipArray[index]
+	const fondo = document.createElement('div')
+	fondo.style.position = 'fixed'
+	fondo.style.top = '0'
+	fondo.style.left = '0'
+	fondo.style.width = '100vw'
+	fondo.style.height = '100vh'
+	fondo.style.backgroundColor = 'rgba(0,0,0,0.3)'
+	fondo.style.backdropFilter = 'blur(2px)'
+	fondo.style.zIndex = '51'
+	fondo.style.pointerEvents = 'auto'
+	fondo.addEventListener('click', () => {
+		tooltip.style.display = ''
+		fondo.remove()
+		tooltipArray[index].style.display = 'none'
+		pictureArray[index].style.zIndex = ''
+		pictureArray[index].style.pointerEvents = ''
+		update(index)
+	})
+	document.body.appendChild(fondo)
+	return tooltip.style.display === 'block'
+}
+
 function showTooltip(index: number): void {
-	if (tooltipArray[index]) {
+	if (!isTooltipOpen(index)) {
 		tooltipArray[index].style.display = 'block'
+		pictureArray[index].style.zIndex = '52'
+		pictureArray[index].style.pointerEvents = 'none'
 		update(index)
 	}
 }
 
 function hideTooltip(index: number): void {
-	if (tooltipArray[index]) {
-		tooltipArray[index].style.display = ''
+	if (isTooltipOpen(index)) {
 	}
 }
 
 buttonArray.forEach((button, index) => {
-	;['mouseenter', 'mouseleave', 'focus', 'blur'].forEach((event) => {
-		button.addEventListener(event, () => {
-			if (event === 'mouseenter' || event === 'focus') {
-				showTooltip(index)
-			} else if (event === 'mouseleave' || event === 'blur') {
-				hideTooltip(index)
-			}
-		})
+	button.addEventListener('click', () => {
+		showTooltip(index)
 	})
 })
 
@@ -73,17 +107,3 @@ textoArray.forEach((texto, index) => {
 		showTooltip(index)
 	})
 })
-
-// ahora crearemos un evento que nos permita saber si se hace click fuera del tooltip cuando
-// este está abierto, para que se cierre, solamente si el tooltip es true
-if (tooltipArray[1]) {
-	document.addEventListener('click', (e) => {
-		if (tooltipArray[1].style.display === 'block') {
-			if (e.target !== tooltipArray[0] && e.target !== buttonArray[0]) {
-				hideTooltip(0)
-				console.log('click fuera');
-				
-			}
-		}
-	})
-}

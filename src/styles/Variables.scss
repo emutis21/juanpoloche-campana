@@ -1,9 +1,9 @@
 $primary-bg-color: hsl(253, 76%, 30%);
-$accent-color: hsl(20, 100%, 44%);
+$accent-color: rgb(224, 75, 0);
 $accent-hover-color: hsl(25, 97%, 39%);
 $scrollbar-color: hsl(280, 100%, 30%);
-$gradient-colors: to top, #2c1287, #311497, hsl(253, 76%, 37%), #3c19b8, #421cc9, #4a1aca,
-	#5118cc, #5816cd, #5f0fbf, #6308b2;
+$gradient-colors: to top, #2c1287, #311497, hsl(253, 76%, 37%), #3c19b8, #421cc9,
+	#4a1aca, #5118cc, #5816cd, #5f0fbf, #6308b2;
 $scroll-padding-top: var(--scroll-padding-top, 55px);
 
 @mixin font-face($font-family, $font-path, $font-weight) {
@@ -13,5 +13,26 @@ $scroll-padding-top: var(--scroll-padding-top, 55px);
 		font-weight: $font-weight;
 		font-style: normal;
 		font-display: fallback;
+	}
+}
+
+@keyframes animate-color {
+	0% {
+		color: hsl(41, 99%, 50%);
+	}
+	25% {
+		color: hsl(169, 100%, 59%);
+	}
+	50% {
+		color: hsl(169, 100%, 79%);
+	}
+	75% {
+		color: hsl(169, 100%, 59%);
+	}
+	90% {
+		color: hsl(41, 99%, 50%);
+	}
+	100% {
+		color: hsl(44, 100%, 30%);
 	}
 }
