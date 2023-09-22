@@ -7,24 +7,28 @@ import { Whatsapp } from './Icons/Whatsapp'
 <aside
   class='box rounded-lg bg-gradient-to-b from-second-500 via-second-400 to-transparent p-1'
 >
-  <div class='h-full w-full md:p-7 bg-[#2e138c] lg:p-11 flex flex-col md:flex-row gap-16 p-4'>
+  <div
+    class='h-full w-full rounded-md md:p-7 bg-[#2e138c] lg:p-11 flex flex-col md:flex-row gap-16 p-4'
+  >
     <header class='h-full flex flex-col gap-3 md:gap-5'>
-      <h2 class='text-2xl md:text-3xl lg:text-4xl text-white font-bold mb-3 md:mb-10'>
+      <h2
+        class='text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-10 text-second-400'
+      >
         ¡Hagamos que nuestra comunidad crezca juntos!
       </h2>
-      <h3 class='text-md md:text-lg font-semibold'>
+      <h3 class='text-md md:text-lg font-semibold text-third-50'>
         Estoy aquí para escucharte y trabajar juntos en un USAQUÉN mejor.
       </h3>
-      <p class='text-md md:text-lg font-semibold'>
+      <p class='text-md md:text-lg font-semibold text-first-50'>
         Contáctame vía WhatsApp, correo electrónico o participa en nuestra
         encuesta para que tu voz sea escuchada.
       </p>
     </header>
-    <ul class='h-full flex flex-col justify-between gap-2'>
+    <ul class='flex flex-col justify-between gap-2'>
       <li class='w-full'>
         <a
           href='mailto:juanpoloche06@gmail.com'
-          class='flex [&>svg]:w-6 text-base md:text-lg text-white items-center gap-3 justify-center md:justify-start'
+          class='flex [&>svg]:w-6 text-base md:text-lg text-white items-center gap-3 justify-center md:justify-start hover:text-second-400 transition-all'
           target='_blank'
           rel='noopener noreferrer'
           aria-label='Contacto por correo electrónico'
@@ -35,7 +39,7 @@ import { Whatsapp } from './Icons/Whatsapp'
       <li class='w-full'>
         <a
           href='#'
-          class='flex [&>svg]:w-6 text-base md:text-lg text-white items-center gap-3 justify-center md:justify-start'
+          class='flex [&>svg]:w-6 text-base md:text-lg text-white items-center gap-3 justify-center md:justify-start hover:text-second-400 transition-all'
           target='_blank'
           rel='noopener noreferrer'
           aria-label='Contacto por WhatsApp'
@@ -46,13 +50,24 @@ import { Whatsapp } from './Icons/Whatsapp'
       <li class='w-full'>
         <a
           href='https://www.instagram.com/juanpolocheq/'
-          class='flex [&>svg]:w-6 text-base md:text-lg text-white items-center gap-3 justify-center md:justify-start'
+          class='flex [&>svg]:w-6 text-base md:text-lg text-white items-center gap-3 justify-center md:justify-start hover:text-second-400 transition-all'
           target='_blank'
           rel='noopener noreferrer'
           aria-label='Contacto por Instagram'
         >
           <Instagram /> juanpolocheq</a
         >
+      </li>
+      <li class='w-full mt-10'>
+        <a
+          href='https://docs.google.com/forms/d/1xcHNKmrgAn_A905oznSyvV04AkCCe5XGPCW5Yml-WmE'
+          class='w-full flex justify-center items-center border-2 border-second-500 text-first-50 font-semibold rounded-md py-2 px-4 md:px-6 hover:bg-second-500 hover:text-white transition-all'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Encuesta'
+        >
+          Encuesta
+        </a>
       </li>
     </ul>
   </div>
