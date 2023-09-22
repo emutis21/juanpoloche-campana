@@ -5,12 +5,12 @@ import { Instagram } from './Icons/Instagram'
 
 <article class='box'>
   <ul
-    class='snap-x snap-proximity w-full flex gap-10 sm:place-items-center overflow-auto'
+    class='snap-x snap-mandatory w-full flex gap-4 md:gap-10 sm:place-items-center overflow-auto'
   >
     {
       team.map((team, id) => (
         <li
-          class='my-6 snap-always snap-center picture relative rounded-xl w-full bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 group
+          class='mb-6 snap-always snap-center picture relative rounded-xl w-[80%] bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 group
         border-first-400 hover:border-first-300 hover:bg-first-600/50 transition-all [&>figure>figcaption>button]:hover:bg-second-500 duration-75 text-center
           max-w-2xl mx-auto [&>figure>figcaption>a]:hover:bg-first-950/50 hover:shadow-[rgba(224,_75,_0,_0.6)_0px_0px_20px]'
         >
@@ -77,3 +77,13 @@ import { Instagram } from './Icons/Instagram'
 </article>
 
 <script src='../hooks/TooltipConf.ts'></script>
+
+<style>
+  ul::-webkit-scrollbar-track {
+    border-radius: 100vh;
+  }
+  ul::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+</style>
