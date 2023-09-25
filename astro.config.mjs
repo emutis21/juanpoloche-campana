@@ -24,7 +24,7 @@ export default defineConfig({
 		}
 	],
 	redirects: {
-		'/propuestas': '/'
+		'/propuestas': '/#propuestas'
 	},
 	output: 'server',
 	adapter: vercel()

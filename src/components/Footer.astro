@@ -1,21 +1,97 @@
-<footer class='w-full pt-[1.5rem] md:pt-[4rem]'>
-  <article
-    class='py-[1.5rem] md:py-[4rem] border-t-2 border-t-white'
+---
+import { Facebook } from './Icons/Facebook'
+import { Instagram } from './Icons/Instagram'
+import { Mail } from './Icons/Mail'
+import { Tiktok } from './Icons/Tiktok'
+import { Whatsapp } from './Icons/Whatsapp'
+---
+
+<footer class='flex flex-col md:grid md:grid-cols-3 place-items-center box h-full gap-12'>
+  <a
+    href='/#inicio'
+    class='w-fit h-full hover:scale-x-[1.01] transition-all duration-75 grid place-items-center self-center'
   >
-    <header class='box'>
-      <div class='flex-grow basis-0 h-full flex'>
+    <img
+      src='/imgs/test-3.webp'
+      alt='Logo Juan Poloche'
+      loading='lazy'
+      class='w-[12.5rem] h-[2.8rem] sm:w-full md:w-[20rem] md:h-[5rem] object-contain self-center bg-white rounded-md'
+    />
+  </a>
+  <span class='bg-white/30 w-full h-[1px] md:w-[2px] md:h-[130px]'></span>
+  <div class='flex-grow basis-0 h-full flex flex-col gap-10 self-center w-full'>
+    <h4 class='text-center w-full text-lg md:text-xl'>
+      Sígueme en redes sociales
+    </h4>
+    <ul class='flex justify-between gap-2 w-full'>
+      <li class='w-full'>
         <a
-          href='/#inicio'
-          class='flex gap-3 w-fit h-full hover:scale-x-[1.01] transition-all duration-75'
+          href='mailto:juanpoloche06@gmail.com'
+          class='flex [&>svg]:md:w-10 [&>svg]:w-7 self-end text-base md:text-lg text-white items-center gap-3 justify-center hover:text-second-400 transition-all'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Contacto por correo electrónico'
         >
-          <img
-            src='/imgs/test-3.webp'
-            alt='Logo Juan Poloche'
-            loading='lazy'
-            class='w-[20rem] h-[5rem] object-contain bg-white rounded-md'
-          />
+          <Mail />
         </a>
-      </div>
-    </header>
-  </article>
+      </li>
+      <li class='w-full'>
+        <a
+          href='#'
+          class='flex [&>svg]:md:w-10 [&>svg]:w-7 text-base md:text-lg text-white items-center gap-3 justify-center hover:text-second-400 transition-all'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Contacto por WhatsApp'
+        >
+          <Whatsapp />
+        </a>
+      </li>
+      <li class='w-full'>
+        <a
+          href='https://www.instagram.com/juanpolocheq/'
+          class='flex [&>svg]:md:w-10 [&>svg]:w-7 text-base md:text-lg text-white items-center gap-3 justify-center hover:text-second-400 transition-all'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Contacto por Instagram'
+        >
+          <Instagram />
+        </a>
+      </li>
+      <li class='w-full'>
+        <a
+          href='https://www.facebook.com/profile.php?id=100094611160568'
+          class='flex [&>svg]:md:w-10 [&>svg]:w-7 text-base md:text-lg text-white items-center gap-3 justify-center hover:text-second-400 transition-all'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Facebook'
+        >
+          <Facebook />
+        </a>
+      </li>
+      <li class='w-full'>
+        <a
+          href='#'
+          class='flex [&>svg]:md:w-10 [&>svg]:w-7 text-base md:text-lg text-white items-center gap-3 justify-center hover:text-second-400 transition-all'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Facebook'
+        >
+          <Tiktok />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <h6
+  class="text-center text-white col-span-3 text-xs md:text-base w-[40ch] self-center"
+  >
+    © 2023 Juan Poloche. Todos los derechos reservados. Desarrollado por{' '}
+    <a
+      href='https://www.instagram.com/smithmutis21'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='text-second-400 hover:text-second-500 transition-all'
+    >
+    Esteban Smith Mutis
+    </a>
+  </h6>
 </footer>

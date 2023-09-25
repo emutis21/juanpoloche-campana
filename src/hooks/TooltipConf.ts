@@ -27,9 +27,9 @@ function update(index: number): void {
 			flip(),
 			shift({
 				padding: 5,
-				crossAxis: true,
+				crossAxis: false,
 				limiter: limitShift({
-					crossAxis: true
+					crossAxis: false
 				})
 			}),
 			arrow({ element: arrowArray[index] })
@@ -85,7 +85,8 @@ function isTooltipOpen(index: number): boolean {
 function showTooltip(index: number): void {
 	if (!isTooltipOpen(index)) {
 		tooltipArray[index].style.display = 'block'
-		pictureArray[index].style.zIndex = '52'
+		tooltipArray[index].style.position = 'absolute'
+		pictureArray[index].style.zIndex = '77'
 		pictureArray[index].style.pointerEvents = 'none'
 		update(index)
 	}

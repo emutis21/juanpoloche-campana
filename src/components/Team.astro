@@ -3,15 +3,15 @@ import { team } from '../data/team.js'
 import { Instagram } from './Icons/Instagram'
 ---
 
-<article class='box'>
+<article class='box z-[-1]'>
   <ul
-    class='snap-x snap-mandatory w-full flex gap-4 md:gap-10 sm:place-items-center overflow-auto'
+    class='snap-x snap-mandatory overflow-x-auto w-full flex gap-4 md:gap-8 sm:place-items-center overflow-y-hidden z-10'
   >
     {
       team.map((team, id) => (
         <li
-          class='mb-6 snap-always snap-center picture relative rounded-xl w-[80%] bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 group
-        border-first-400 hover:border-first-300 hover:bg-first-600/50 transition-all [&>figure>figcaption>button]:hover:bg-second-500 duration-75 text-center
+          class='mb-6 snap-always snap-center picture relative rounded-xl w-[80%] md:w-[37%] bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 group
+        border-first-400 hover:border-first-300 hover:bg-first-600/50 transition-all [&>figure>figcaption>button]:hover:bg-second-500 duration-150 text-center
           max-w-2xl mx-auto [&>figure>figcaption>a]:hover:bg-first-950/50 hover:shadow-[rgba(224,_75,_0,_0.6)_0px_0px_20px]'
         >
           <figure class='gap-5 flex flex-col'>
@@ -60,7 +60,7 @@ import { Instagram } from './Icons/Instagram'
                 id={`tooltip-${id}`}
                 role='tooltip'
                 class='tooltip hover:block pointer-events-none shadow-xl shadow-black/20 hidden w-max max-w-[93%] md:max-w-2xl absolute
-                text-left top-0 left-0 border-4 border-first-300 bg-white text-first-700 font-semibold p-4 rounded-md text-base z-[70]'
+                text-left top-0 left-0 border-4 border-first-300 bg-white text-first-700 font-semibold p-4 rounded-md text-base z-[90]'
               >
                 <div set:html={team.description} />
                 <div
