@@ -46,6 +46,27 @@ strong {
 	margin: 0 auto;
 }
 
+.ul {
+	&::-webkit-scrollbar-track {
+		border-radius: 100vh;
+	}
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+}
+
+.scroll-w {
+	&::-webkit-scrollbar-track {
+		border-radius: 100vh;
+		background-color: transparent;
+	}
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+}
+
 @include font-face('InterTight', '/fonts/InterTight-Medium.ttf', 500);
 @include font-face('InterTight-Bold', '/fonts/InterTight-SemiBold.ttf', 800);
 @include font-face('InterTight-Regular', '/fonts/InterTight-Regular.ttf', 400);

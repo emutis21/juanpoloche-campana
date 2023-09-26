@@ -5,7 +5,7 @@ import { Instagram } from './Icons/Instagram'
 
 <article class='box z-[-1]'>
   <ul
-    class='snap-x snap-mandatory overflow-x-auto w-full flex gap-4 md:gap-8 sm:place-items-center overflow-y-hidden z-10'
+    class='ul snap-x snap-mandatory overflow-x-auto w-full flex gap-4 md:gap-8 sm:place-items-center overflow-y-hidden z-10'
   >
     {
       team.map((team, id) => (
@@ -77,13 +77,3 @@ import { Instagram } from './Icons/Instagram'
 </article>
 
 <script src='../hooks/TooltipConf.ts'></script>
-
-<style>
-  ul::-webkit-scrollbar-track {
-    border-radius: 100vh;
-  }
-  ul::-webkit-scrollbar {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
-</style>
