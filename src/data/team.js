@@ -43,7 +43,7 @@ export const team = [
     instagram: 'https://instagram.com/sofi_gonz461?igshid=YTQwZjQ0NmI0OA==',
     description: [
       '<p>Hola, soy Sofía González, asesora de campaña de #83 por dignidad y compromiso. Egresada del colegio Usaquén, he seguido el crecimiento de Juan Poloche desde estudiante hasta su candidatura en diversas instancias participativas.</p>',
-      '<p>Mi experiencia de 11 años en nuestra institución me llevó a liderar decisiones administrativas como personera y, ahora, formo parte del consejo directivo como exalumna.</p>',
+      '<p>En 11 años en el colegio llegué a liderar decisiones administrativas como personera y, ahora, formo parte del consejo directivo como exalumna.</p>',
       '<p>Estoy convencida de que Juan Poloche es la mejor opción para el edilato de Usaquén, por su compromiso con la comunidad y su capacidad de liderazgo.</p>'
     ],
     img: '/imgs/team/test-sofia-2.webp'

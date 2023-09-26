@@ -70,7 +70,7 @@ function isTooltipOpen(index: number): boolean {
 	fondo.style.height = '100vh'
 	fondo.style.backgroundColor = 'rgba(0,0,0,0.3)'
 	fondo.style.backdropFilter = 'blur(2px)'
-	fondo.style.zIndex = '51'
+	fondo.style.zIndex = '71'
 	fondo.style.pointerEvents = 'auto'
 	fondo.addEventListener('click', () => {
 		tooltip.style.display = ''
