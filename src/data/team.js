@@ -6,8 +6,8 @@ export const team = [
     position: 'Candidata al consejo',
     instagram: 'https://www.instagram.com/lilianacastaneda2023/',
     description: [
-      '<p>Hola, soy Liliana Castañeda, candidata al consejo de Bogotá por el partido Colombia Humana. Soy abogada de la Universidad Nacional de Colombia, especialista en Derecho Administrativo de la Universidad Externado de Colombia y magíster en Derecho Administrativo de la Universidad Nacional de Colombia.</p>',
-      '<p>Tengo 20 años de experiencia en el sector público, en el que he trabajado en la Contraloría de Bogotá, la Personería de Bogotá, la Secretaría de Educación de Bogotá, la Secretaría de Hacienda de Bogotá, la Secretaría de Gobierno de Bogotá, la Secretaría de Salud de Bogotá, la Secretaría de Ambiente de Bogotá, la Secretaría de Desarrollo Económico de Bogotá, la Secretaría de Planeación de Bogotá, la Secretaría de Integración Social de Bogotá, la Secretaría de Planeación de Bogotá, la Secretaría de Integración Social de Bogotá, la Secreta</p>'
+      '<p>Hola, soy Liliana Castañeda, Economista y estudiante de Maestría en Ciencias Económicas de la Universidad Nacional.</p>',
+      '<p>Decidí hacer fórmula con Juan porque creo en su capacidad de liderazgo y en su compromiso con la localidad. Juan es un joven que ha demostrado su compromiso con la comunidad, y que tiene la capacidad de generar propuestas que beneficien a todos los habitantes de Usaquén.</p>'
     ],
     img: '/imgs/team/test-liliana-1.webp'
   },
@@ -44,7 +44,7 @@ export const team = [
     description: [
       '<p>Hola, soy Sofía González, asesora de campaña de #83 por dignidad y compromiso. Egresada del colegio Usaquén, he seguido el crecimiento de Juan Poloche desde estudiante hasta su candidatura en diversas instancias participativas.</p>',
       '<p>Mi experiencia de 11 años en nuestra institución me llevó a liderar decisiones administrativas como personera y, ahora, formo parte del consejo directivo como exalumna.</p>',
-      '<p>Además, contribuí a la producción cultural y soy bailarina en Folkolombia. Descubrí que un joven con ideas innovadoras puede impactar positivamente en la sociedad al asesorar esta campaña.</p>'
+      '<p>Estoy convencida de que Juan Poloche es la mejor opción para el edilato de Usaquén, por su compromiso con la comunidad y su capacidad de liderazgo.</p>'
     ],
     img: '/imgs/team/test-sofia-2.webp'
   },

@@ -1,6 +1,6 @@
 import {
 	computePosition,
-	flip,
+	autoPlacement,
 	shift,
 	offset,
 	arrow,
@@ -23,8 +23,10 @@ function update(index: number): void {
 	computePosition(buttonArray[index], tooltipArray[index], {
 		placement: 'top',
 		middleware: [
+			autoPlacement({ allowedPlacements: ['top', 'bottom'], crossAxis: true,
+			padding: 5
+		}),
 			offset(6),
-			flip(),
 			shift({
 				padding: 5,
 				crossAxis: false,

@@ -17,7 +17,7 @@ function CardGrid() {
   }
 
   const buttonClasses =
-    'modal-open self-end bg-second-500 text-first-900 hover:border-first-500 text-sm md:text-md font-semibold py-2 px-4 rounded-md'
+    'modal-open self-end border-[5px] bg-second-100 border-second-400 text-first-900 hover:border-first-500 text-sm md:text-md font-semibold py-2 px-4 rounded-md'
 
   return (
     <div
