@@ -37,6 +37,27 @@ const { pageTitle, pageDescription } = Astro.props
     <link rel='icon' type='image' href='/favicon-border.webp' />
     <link rel='manifest' href='/manifest.json' />
 
+    <!-- // vamos a hacer que se precarguen las imagenes -->
+    <script>
+      window.addEventListener('load', () => {
+        const imagesToPreload = [
+          '/imgs/slider/bg-1.webp',
+          '/imgs/slider/bg-1-mobile.webp',
+          '/imgs/slider/bg-2.webp',
+          '/imgs/slider/bg-2-mobile.webp',
+          '/imgs/slider/bg-3-jennifer.webp',
+          '/imgs/slider/bg-3-jennifer-mobile.webp',
+          '/imgs/slider/bg-4.webp',
+          '/imgs/slider/bg-4-mobile.webp'
+        ]
+
+        imagesToPreload.forEach((imageUrl) => {
+          const image = new Image()
+          image.src = imageUrl
+        })
+      })
+    </script>
+
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ'
     ></script>
     <script>
