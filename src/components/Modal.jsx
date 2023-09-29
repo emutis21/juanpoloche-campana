@@ -41,7 +41,7 @@ const ModalComponent = ({
   return (
     <>
       {isOpen && (
-        <div className='overflow-y-hidden fixed w-full h-full z-50 top-0 left-0 flex items-center justify-center'>
+        <div className='overflow-y-hidden fixed w-full h-full z-[80] top-0 left-0 flex items-center justify-center'>
           <div
             className='modal-verlay absolute w-full h-full backdrop-blur-[2px] bg-black/30'
             onClick={handleCloseModal}

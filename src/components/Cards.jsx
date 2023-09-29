@@ -17,7 +17,7 @@ function CardGrid() {
   }
 
   const buttonClasses =
-    'modal-open self-end border-[5px] bg-second-200 border-second-500 text-first-900 hover:bg-second-500 hover:text-white text-sm md:text-md font-semibold py-2 px-4 rounded-md'
+    'modal-open self-end border-4 bg-second-200 border-second-500 text-first-950 text-sm md:text-md font-semibold py-1 px-3 rounded-md'
 
   return (
     <div
@@ -35,8 +35,8 @@ function CardGrid() {
           }}
           viewport={{ once: true, amount: 0.1 }}
           key={card.id}
-          className='max-w-lg min-h-full mx-auto flex-1 py-6 px-4 bg-white text-black [&>img]:hover:brightness-110 rounded-lg
-          overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between'
+          className='shadowm max-w-lg min-h-full mx-auto flex-1 py-6 px-4 bg-white text-black [&>img]:hover:brightness-110 rounded-lg
+          overflow-hidden transition-all flex flex-col justify-between [&>figcaption>div>button]:hover:bg-second-500 [&>figcaption>div>button]:hover:text-white [&>figcaption>div>button]:transition-all'
         >
           <img
             srcSet={`${card.imgMobile} 480w, ${card.img} 800w`}

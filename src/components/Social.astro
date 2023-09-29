@@ -1,12 +1,10 @@
 ---
-import { Instagram } from "./Icons/Instagram";
-import { Whatsapp } from "./Icons/Whatsapp";
-
+import { Instagram } from './Icons/Instagram'
+import { Whatsapp } from './Icons/Whatsapp'
 ---
 
-
 <div
-  class='links flex flex-col h-fit md:flex-row bg-second-500 md:w-fit p-2 w-fit md:px-2 md:h-10 gap-2 md:gap-4 md:py-1 fixed bottom-3 right-3 md:right-3 rounded-lg shadow-lg hover:shadow-2xl [&>svg]:cursor-pointer'
+  class='links flex flex-col h-fit md:flex-row bg-second-500 md:w-fit p-2 w-fit md:px-2 md:h-10 gap-2 md:gap-4 md:py-1 fixed bottom-10 right-3 md:right-3 rounded-lg [&>svg]:cursor-pointer'
   '
 >
   <a
@@ -28,3 +26,14 @@ import { Whatsapp } from "./Icons/Whatsapp";
     <Whatsapp />
   </a>
 </div>
+
+<style>
+  .links {
+    box-shadow: 0.1px 0.1px 0.1px hsl(var(--shadow-color) / 0.96),
+      0.4px 0.6px 0.7px -0.7px hsl(var(--shadow-color) / 0.87),
+      1.1px 1.5px 1.8px -1.4px hsl(var(--shadow-color) / 0.77),
+      2.4px 3.4px 4px -2.1px hsl(var(--shadow-color) / 0.68),
+      4.8px 6.9px 8.1px -2.8px hsl(var(--shadow-color) / 0.58),
+      8.8px 12.5px 14.8px -3.5px hsl(var(--shadow-color) / 0.49);
+  }
+</style>

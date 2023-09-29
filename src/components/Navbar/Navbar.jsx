@@ -33,7 +33,7 @@ function Navbar() {
       </div>
       <NavList />
       <div className='hidden justify-end flex-grow basis-0 md:flex'>
-        <button className='text-[0.8rem] flex gap-2 px-4 py-1 items-center font-medium bg-transparent border border-[hsl(25,97%,49%)] rounded-md hover:font-semibold hover:rounded-md hover:bg-[hsl(25,97%,49%)] transition-all duration-300'>
+        <button className='text-[0.8rem] text-first-950 flex gap-2 px-3 py-1 items-center font-semibold bg-second-200 border-4 border-second-500 rounded-md hover:rounded-md hover:bg-second-500 transition-all hover:text-white'>
           Únete
           <Whatsapp />
         </button>

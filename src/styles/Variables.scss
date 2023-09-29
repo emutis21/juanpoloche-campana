@@ -1,7 +1,18 @@
+:root {
+	--shadow-color: 0deg 0% 0%;
+	--shadow-elevation-low: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0),
+		0px 0.7px 1px hsl(var(--shadow-color) / 0.15);
+	--shadow-elevation-medium: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0),
+		0.1px 4.3px 7px hsl(var(--shadow-color) / 0.21);
+	--shadow-elevation-high: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0),
+		0.1px 5.2px 7.8px hsl(var(--shadow-color) / 0.18),
+		0.4px 16.4px 24.6px hsl(var(--shadow-color) / 0.35);
+}
+
 $primary-bg-color: hsl(253, 76%, 30%);
-$accent-color: rgb(224, 75, 0);
+$accent-color: hsl(20, 100%, 65%);
 $accent-hover-color: hsl(25, 97%, 39%);
-$scrollbar-color: hsl(280, 100%, 30%);
+$scrollbar-color: hsl(20, 100%, 50%);
 $gradient-colors: to top, #2c1287, #311497, hsl(253, 76%, 37%), #3c19b8, #421cc9,
 	#4a1aca, #5118cc, #5816cd, #5f0fbf, #6308b2;
 $scroll-padding-top: var(--scroll-padding-top, 55px);

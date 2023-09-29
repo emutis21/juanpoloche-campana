@@ -3,7 +3,7 @@ import Slider from './Slider'
 export default function Hero() {
   return (
     <section
-      className='aspect-video w-full h-[30vh] md:h-[55vh] lg:h-[70vh] xl:h-[80vh] shadow-lg bg-center bg-cover bg-no-repeat md:bg-fixed'
+      className='aspect-video w-full h-[30vh] md:h-[55vh] lg:h-[70vh] xl:h-[80vh] bg-center bg-cover bg-no-repeat md:bg-fixed'
       style={{
         backgroundImage: `url(/imgs/usaquen.webp)`
       }}

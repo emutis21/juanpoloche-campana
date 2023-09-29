@@ -6,22 +6,24 @@ export const db = [
       {
         id: '1',
         title: 'Capacitación a los impuestos tributarios',
-        subtitle:
-          'La capacitación es la clave para el éxito de los impuestos tributarios',
+        icon: 'First',
+        subtitle: 'Trabajamos por un desarrollo económico comercial local',
         description:
-          'Trabajaremos en la capacitación de los impuestos tributarios, creando lugares seguros y atractivos donde los jóvenes puedan desarrollar actividades recreativas, deportivas y culturales.'
+          '<p>Nuestra labor con <strong>La Junta Administradora Local (JAL)</strong> será liderar iniciativas para apoyar a la clase media y baja, priorizando la protección y atención a los comerciantes locales.</p><p>Durante nuestro mandato en la JAL, colaboraremos estrechamente con la Alcaldía de Usaquén para establecer un convenio con la Cámara de Comercio.</p><p>Este acuerdo permitirá programas de capacitación tributaria, mejorando el conocimiento financiero de nuestros comerciantes y creando un ambiente comercial más sólido y equitativo para todos.'
       },
       {
         id: '2',
-        title:
-          'Mejoramiento de la participación inclusiva de las organizaciones',
-        subtitle: 'Impulsar el crecimiento de los comercios locales',
+        title: 'Aumento de la participación inclusiva de las organizaciones',
+        icon: 'Second',
+        subtitle:
+          'Impulsar la participación social por medio de agrupaciones locales.',
         description:
-          'Promoveremos programas de capacitación en marketing, gestión empresarial y transformación digital para pequeños comerciantes, además de facilitar espacios para ferias y exposiciones de productos locales.'
+          '<p>Implementaremos programas de capacitación exhaustivos en marketing, gestión empresarial y transformación digital.</p> <p>Además, facilitaremos espacios para ferias y exposiciones, brindaremos asesoramiento personalizado a través de mentorías y consultorías, y promoveremos prácticas <strong>eco-amigables</strong> para fomentar la economía circular.</p><p>Estas estrategias se combinan para crear un entorno favorable que no solo fortalece la economía local, sino que también cultiva un sentido de comunidad y colaboración entre los comerciantes.</p>'
       },
       {
         id: '3',
         title: 'Control a la gestión pública para el desarrollo local',
+        icon: 'Third',
         subtitle:
           'Así como los comercios, los emprendimientos locales también necesitan apoyo',
         description:
@@ -30,6 +32,7 @@ export const db = [
       {
         id: '4',
         title: 'Vinculación social y empresarial',
+        icon: 'Fourth',
         subtitle:
           'De esta manera, los jóvenes podrán desarrollar sus habilidades y talentos',
         description:

@@ -7,9 +7,19 @@ html {
 }
 
 body {
-	background: linear-gradient($gradient-colors);
+	// background: linear-gradient($gradient-colors);
 	color: #fff;
 	font-family: 'InterTight', sans-serif;
+	background: repeating-radial-gradient(
+				circle at 70% 65%,
+				transparent,
+				transparent 5px,
+				rgba(0, 0, 0, 0.055) 5px,
+				rgba(0, 0, 0, 0.055) 60px
+			)
+			top left repeat,
+		linear-gradient($gradient-colors);
+	background-size: cover;
 }
 
 h1,
@@ -18,6 +28,11 @@ h3,
 h5,
 strong {
 	text-wrap: balance;
+}
+
+strong {
+	color: $accent-color;
+	font-size: 0.975rem;
 }
 
 ::-webkit-scrollbar {
@@ -53,6 +68,13 @@ strong {
 	&::-webkit-scrollbar {
 		width: 0.5rem;
 		height: 0.5rem;
+	}
+}
+
+.shadowm {
+	box-shadow: var(--shadow-elevation-medium);
+	&:hover {
+		box-shadow: var(--shadow-elevation-high);
 	}
 }
 
@@ -95,11 +117,6 @@ strong {
 	animation-name: show;
 	animation-range: entry 25% cover 30%;
 	animation-fill-mode: both;
-}
-
-strong {
-	color: $accent-color;
-	font-size: 1.175rem;
 }
 
 .logo {

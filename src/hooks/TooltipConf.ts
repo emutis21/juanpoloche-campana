@@ -7,12 +7,14 @@ import {
 	limitShift
 } from '@floating-ui/dom'
 
+const header = document.querySelector('.header')
 const buttons = document.querySelectorAll('.tooltip-button')
 const tooltips = document.querySelectorAll('.tooltip')
 const arrowElements = document.querySelectorAll('.arrow')
 const textos = document.querySelectorAll('.texto')
 const pictures = document.querySelectorAll('.picture')
 
+const headerE = header as HTMLElement
 const buttonArray = Array.from(buttons) as HTMLElement[]
 const tooltipArray = Array.from(tooltips) as HTMLElement[]
 const arrowArray = Array.from(arrowElements) as HTMLElement[]
@@ -70,9 +72,10 @@ function isTooltipOpen(index: number): boolean {
 	fondo.style.height = '100vh'
 	fondo.style.backgroundColor = 'rgba(0,0,0,0.3)'
 	fondo.style.backdropFilter = 'blur(2px)'
-	fondo.style.zIndex = '71'
+	headerE.style.pointerEvents = 'none'
 	fondo.style.pointerEvents = 'auto'
 	fondo.addEventListener('click', () => {
+		headerE.style.pointerEvents = ''
 		tooltip.style.display = ''
 		fondo.remove()
 		tooltipArray[index].style.display = 'none'
