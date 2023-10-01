@@ -56,7 +56,7 @@ export const bg = [
     imgMobile: '/imgs/slider/bg-2-mobile.webp',
     sizes: 'full md:pt-32',
     component: `
-      <div class='w-full h-full grid grid-rows-3 place-content-center md:px-0 mx-auto pt-20 md:pt-20'>
+      <div class='w-full h-full grid grid-rows-3 place-content-center md:px-0 mx-auto pt-32 gap-10 md:gap-0 md:pt-28'>
         <a
           href='https://www.instagram.com/lilianacastanedam/'
           target='_blank'
