@@ -2,7 +2,7 @@ export const Arrow = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='icon icon-tabler icon-tabler-circle-arrow-right-filled hover:scale-110 transition-transform duration-75 ease'
+      className='icon icon-tabler icon-tabler-circle-arrow-right-filled hover:scale-110 transition-transform duration-75 ease text'
       width='100%'
       height='100%'
       viewBox='0 0 24 24'

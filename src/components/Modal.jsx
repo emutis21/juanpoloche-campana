@@ -56,7 +56,7 @@ const ModalComponent = ({
           >
             <button
               onClick={handleCloseModal}
-              className='sticky top-0 w-full flex justify-end [&>svg]:w-8 md:[&>svg]:w-10 pl-5 pr-[22px] md:px-5'
+              className='sticky top-0 w-full [&>svg]:bg-second-500 [&>svg]:rounded-full [&>svg]:p-[1px] flex justify-end [&>svg]:w-8 md:[&>svg]:w-10 pl-5 pr-[27px] md:px-5 text-white'
             >
               <Close />
             </button>

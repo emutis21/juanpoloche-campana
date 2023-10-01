@@ -1,12 +1,17 @@
 import { motion } from 'framer-motion'
-import { Title } from '../Title'
-import { Banner } from '../Banner'
 
-export const SliderItem = ({ img, imgMobile, sizes, title, number, description }) => {
+export const SliderItem = ({
+  img,
+  imgMobile,
+  sizes,
+  component,
+  componentL,
+  description
+}) => {
   return (
-    <div className='cursor-grab w-[98%] mx-auto h-full text-center flex align-center justify-center'>
+    <div className='cursor-grab w-[98%] mx-auto h-full text-center flex'>
       <picture
-        className={`md:w-${sizes} flex justify-center justify-self-end items-end p-0`}
+        className={`md:w-${sizes} flex flex-1 justify-center pointer-events-none justify-self-end items-end p-0`}
       >
         <motion.img
           transition={{
@@ -19,14 +24,21 @@ export const SliderItem = ({ img, imgMobile, sizes, title, number, description }
           src={img}
           alt={description}
           loading='lazy'
-          className='h-full w-full drop-shadow-2xl pointer-events-none object-contain object-bottom'
+          className='h-full w-full z-[-1] drop-shadow-2xl object-contain object-bottom'
         />
       </picture>
-
-      <div className='h-full w-1/2 flex gap-12 flex-col justify-center items-center'>
-        <Title />
-        <Banner />
-      </div>
+      {component && (
+        <div
+          className={`w-1/2 flex-1 h-full flex pointer-events-none`}
+          dangerouslySetInnerHTML={{ __html: component }}
+        />
+      )}
+      {componentL && (
+        <div
+          className={`w-fit h-full mx-auto grid pointer-events-auto place-content-center`}
+          dangerouslySetInnerHTML={{ __html: componentL }}
+        />
+      )}
     </div>
   )
 }

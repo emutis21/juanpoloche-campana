@@ -7,7 +7,6 @@ html {
 }
 
 body {
-	// background: linear-gradient($gradient-colors);
 	color: #fff;
 	font-family: 'InterTight', sans-serif;
 	background: repeating-radial-gradient(
@@ -32,7 +31,6 @@ strong {
 
 strong {
 	color: $accent-color;
-	font-size: 0.975rem;
 }
 
 ::-webkit-scrollbar {
@@ -59,6 +57,10 @@ strong {
 	width: 1080px;
 	max-width: 98%;
 	margin: 0 auto;
+}
+
+.hero {
+	background-image: url('/imgs/slider/usaquen.webp');
 }
 
 .ul {
@@ -131,5 +133,9 @@ strong {
 
 	.box {
 		max-width: 90%;
+	}
+
+	.hero {
+		background-image: url('/imgs/slider/usaquen-mobile.webp');
 	}
 }

@@ -18,10 +18,10 @@ export const team = [
     position: 'Gerente de campaña',
     instagram: 'https://www.instagram.com/dianavillanueva2023/',
     description: [
-      '<p>Hola, soy Diana Villanueva, gerente de campaña de Juan Poloche. Soy estudiante de derecho de la Universidad Nacional de Colombia, y he trabajado con Juan Poloche desde que inició su carrera política.</p>',
-      '<p>Mi trabajo en esta campaña ha sido encargarme de la logística, de la imagen de Juan Poloche, y de la organización de los eventos de campaña.</p>'
+      '<p>Hola, soy Diana Villanueva, gerente de campaña del número 83 de Usaquén por dignidad y compromiso.</p>',
+      '<p>Actualmente soy estudiante de la facultad de derecho y ciencias políticas y sociales de la universidad de la Gran Colombia y durante el desarrollo de mi Carrera he visto el esfuerzo y progreso de Juan Poloche como persona así como en los diferentes entornos políticos que ha desarrollado a lo largo de su carrera.</p>'
     ],
-    img: '/imgs/team/user.webp'
+    img: '/imgs/team/diana.webp'
   },
   {
     id: 3,

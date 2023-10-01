@@ -10,7 +10,7 @@ const { pageTitle, pageDescription } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang='es'>
+<html lang='es-CO'>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -37,7 +37,6 @@ const { pageTitle, pageDescription } = Astro.props
     <link rel='icon' type='image' href='/favicon-border.webp' />
     <link rel='manifest' href='/manifest.json' />
 
-    <!-- // vamos a hacer que se precarguen las imagenes -->
     <script>
       window.addEventListener('load', () => {
         const imagesToPreload = [
@@ -48,7 +47,12 @@ const { pageTitle, pageDescription } = Astro.props
           '/imgs/slider/bg-3-jennifer.webp',
           '/imgs/slider/bg-3-jennifer-mobile.webp',
           '/imgs/slider/bg-4.webp',
-          '/imgs/slider/bg-4-mobile.webp'
+          '/imgs/slider/bg-4-mobile.webp',
+          '/imgs/votaciones-juan.webp',
+          '/imgs/votaciones-liliana.webp',
+          '/imgs/logo-liliana.webp',
+          '/imgs/logo-jennifer-pedraza.png',
+          '/imgs/primero-la-gente.webp',
         ]
 
         imagesToPreload.forEach((imageUrl) => {

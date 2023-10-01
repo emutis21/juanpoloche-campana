@@ -36,7 +36,7 @@ export default function Slider() {
   const [activeIndex, setActiveIndex] = useState(0)
   const autoplayTimer = useRef(null)
 
-  const duration = 19000
+  const duration = 190000
 
   const getNextIndex = () => {
     return activeIndex === bg.length - 1 ? 0 : activeIndex + 1
@@ -67,7 +67,7 @@ export default function Slider() {
   }, [activeIndex])
 
   const bgIndex = wrap(0, bg.length, activeIndex)
-  const { title, description, img, imgMobile, number, sizes } = bg[bgIndex]
+  const { title, description, img, imgMobile, component, componentL, sizes } = bg[bgIndex]
 
   const paginate = (newDirection) => {
     setActiveIndex((prevIndex) => wrap(0, bg.length, prevIndex + newDirection))
@@ -107,20 +107,21 @@ export default function Slider() {
             description={description}
             img={img}
             imgMobile={imgMobile}
-            number={number}
+            component={component}
+            componentL={componentL}
           />
         </motion.div>
       </AnimatePresence>
 
       <div
-        className='absolute w-5 md:w-7 top-1/2 right-1 transform z-50 -translate-y-1/2 text-3xl cursor-pointer'
+        className='absolute w-6 md:w-8 top-1/2 right-[-2px] transform z-50 -translate-y-1/2 text-3xl cursor-pointer'
         onClick={() => paginate(1)}
       >
         <Arrow />
       </div>
 
       <div
-        className='absolute w-5 md:w-7 top-1/2 left-1 rotate-180 transform z-50 -translate-y-1/2 text-3xl cursor-pointer'
+        className='absolute w-6 md:w-8 top-1/2 left-[-2px] rotate-180 transform z-50 -translate-y-1/2 text-3xl cursor-pointer'
         onClick={() => paginate(-1)}
       >
         <Arrow />

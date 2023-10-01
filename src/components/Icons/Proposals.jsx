@@ -64,7 +64,7 @@ export const Fourth = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-14 h-14'
+      className='w-12 h-12'
       width='100%'
       height='100%'
       viewBox='0 0 24 24'
