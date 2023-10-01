@@ -90,7 +90,7 @@ const Sidebar = ({
             </a>
             <a
               target='_blank'
-              href='#'
+              href='https://wa.me/573107789368?text=%C2%A1Hola!%20Quisiera%20saber%20m%C3%A1s%20sobre%20tus%20propuestas%20para%20Usaqu%C3%A9n.%20Estoy%20interesado/a%20en%20apoyar%20iniciativas%20positivas.%20%C2%BFPuedes%20compartir%20m%C3%A1s%20detalles?'
               className='flex-1 p-0'
               aria-label='Whatsapp'
             >

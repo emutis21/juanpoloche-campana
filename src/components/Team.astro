@@ -10,12 +10,12 @@ import { Instagram } from './Icons/Instagram'
     {
       team.map((team, id) => (
         <li
-          class='shadowm mb-6 mx-2 md:mx-3 snap-always snap-center picture relative rounded-xl w-[80%] md:w-[27%] bg-first-600/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-500 group
-        border-first-400 hover:border-first-300 hover:bg-first-600/50 transition-all [&>figure>figcaption>button]:hover:bg-second-500 [&>figure>figcaption>button]:hover:text-white text-center
+          class='shadowm mb-6 mx-2 md:mx-3 snap-always snap-center picture relative rounded-xl w-[80%] md:w-[27%] bg-first-700/90 py-7 px-5 border-4 [&>figure>picture>img]:hover:bg-first-900 group
+        border-first-400 hover:border-first-300 hover:bg-first-600/90 transition-all [&>figure>figcaption>button]:hover:bg-second-500 [&>figure>figcaption>button]:hover:text-white text-center
           max-w-2xl [&>figure>figcaption>a]:hover:bg-first-950/50'
         >
           <figure class='gap-5 flex flex-col'>
-            <picture class='img self-center transition-all justify-center w-fit h-fit cursor-pointer overflow-hidden bg-first-900 rounded-full'>
+            <picture class='img self-center transition-all justify-center w-fit h-fit cursor-pointer overflow-hidden bg-first-500 rounded-full'>
               <img
                 src={team.img}
                 alt={`Miemro del equipo ${team.name}`}
@@ -59,10 +59,10 @@ import { Instagram } from './Icons/Instagram'
               <div
                 id={`tooltip-${id}`}
                 role='tooltip'
-                class='tooltip hover:block pointer-events-none  shadow-xl shadow-black/20 hidden w-[80ch] max-w-[120%] md:max-w-2xl absolute
-                text-left top-0 left-0 border-4 border-second-500 bg-white text-first-700 font-semibold p-4 rounded-md text-sm z-[90]'
+                class='tooltip hover:block pointer-events-auto shadow-xl shadow-black/20 hidden w-[80ch] max-w-[120%] md:max-w-2xl absolute
+                text-left top-0 left-0 border-4 border-second-500 bg-white text-first-700 font-medium p-2 md:p-4 rounded-md text-[0.82rem]/[1.15rem] md:text-sm z-[90]'
               >
-                <div set:html={team.description} />
+                <div class="grid gap-1" set:html={team.description} />
                 <div
                   id='arrow'
                   class='absolute bg-white w-2 h-2 transform rotate-45 arrow'

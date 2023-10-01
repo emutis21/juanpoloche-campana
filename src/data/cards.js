@@ -119,8 +119,8 @@ export const cards = [
         }
       ]
     },
-    img: '/imgs/cards/iedusaquen.webp',
-    imgMobile: '/imgs/cards/iedusaquen-mobile.webp',
+    img: '/imgs/cards/experiencia.webp',
+    imgMobile: '/imgs/cards/experiencia-mobile.webp',
     alt: 'Experiencia'
   }
 ]
