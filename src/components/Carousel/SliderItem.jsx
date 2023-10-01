@@ -35,7 +35,7 @@ export const SliderItem = ({
       )}
       {componentL && (
         <div
-          className={`w-fit h-full mx-auto grid pointer-events-auto place-content-center`}
+          className={`w-fit h-full mx-auto grid pointer-events-none place-content-center`}
           dangerouslySetInnerHTML={{ __html: componentL }}
         />
       )}

@@ -36,7 +36,7 @@ export default function Slider() {
   const [activeIndex, setActiveIndex] = useState(0)
   const autoplayTimer = useRef(null)
 
-  const duration = 190000
+  const duration = 13000
 
   const getNextIndex = () => {
     return activeIndex === bg.length - 1 ? 0 : activeIndex + 1

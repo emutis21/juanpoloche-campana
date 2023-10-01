@@ -6,7 +6,7 @@ export const bg = [
     imgMobile: '/imgs/slider/bg-1-mobile.webp',
     sizes: '1/2 pt-8 md:pt-20',
     component: `
-      <div class='w-[90%] h-full grid grid-rows-3 place-content-center px-10 md:px-0 mx-auto pt-12 md:pt-20 pointer-events-auto'>
+      <div class='w-[90%] h-full grid grid-rows-3 place-content-center px-10 md:px-0 mx-auto pt-12 md:pt-20'>
         <picture
           class='img w-fit h-fit grid place-items-center self-center mx-auto'
         >
@@ -25,7 +25,7 @@ export const bg = [
             <img src='/imgs/votaciones-juan.webp' alt='Marque así por Juan Poloche' class='w-9/12 mx-auto' />
           </picture>
         </div>
-        <span class='flex p-2 rounded-md mx-auto bg-first-950/50 backdrop-blur-lg h-fit'>
+        <span class='flex p-2 rounded-md mx-auto bg-first-950/50 backdrop-blur-lg h-fit pr-3 md:pr-4'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             class='w-5 md:w-12 rotate-[270deg] text-third-200 self-center'
