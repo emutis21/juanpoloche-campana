@@ -75,7 +75,7 @@ export const bg = [
           <img src='/imgs/votaciones-liliana.webp' alt='Marque así por Liliana Castañeda' class='w-full' />
         </picture>
         <div class='absolute top-0 left-0 md:static w-full pt-5 text-[.9rem]/4 font-[600] py-1 md:py-2 self-center sm:text-base/4 md:text-xl/5 lg:text-2xl/7 uppercase text-[#fff]'>
-          <h1 class='whitespace-nowrap flex flex-col gap-2 bg-first-950/50 backdrop-blur-lg w-fit mx-auto p-2 rounded-md'>
+          <h1 class='whitespace-nowrap flex flex-col gap-1 md:gap-2 bg-first-950/50 backdrop-blur-lg w-fit mx-auto p-2 rounded-md'>
             Con nuestra fórmula
             <img
               src='/imgs/vamosxmas.webp'
