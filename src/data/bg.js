@@ -81,7 +81,7 @@ export const bg = [
               src='/imgs/vamosxmas.webp'
               alt='Logo Juan Poloche'
               loading='lazy'
-              class='block w-16 md:w-40 h-auto object-contain self-center rounded-md mx-auto'
+              class='block w-28 md:w-40 h-auto object-contain self-center rounded-md mx-auto'
             />
           </h1>
         </div>
