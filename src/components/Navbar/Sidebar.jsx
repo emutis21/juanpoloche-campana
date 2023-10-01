@@ -41,7 +41,7 @@ const Sidebar = ({
         onClick={handleOutsideClick}
         custom={height}
         ref={containerRef}
-        className={`top-0 right-0 w-full flex justify-end fixed h-[100dvh] h-screen z-50 ease-in-out`}
+        className={`top-0 right-0 w-full flex justify-end fixed h-screen h-[100dvh] z-50 ease-in-out`}
       >
         <motion.div
           initial={{ translateX: '100%', backdropBlur: 0, opacity: 0 }}
