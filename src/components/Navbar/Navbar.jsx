@@ -38,7 +38,7 @@ function Navbar() {
           href='https://wa.me/573107789368?text=%C2%A1Hola!%20Quisiera%20saber%20m%C3%A1s%20sobre%20tus%20propuestas%20para%20Usaqu%C3%A9n.%20Estoy%20interesado/a%20en%20apoyar%20iniciativas%20positivas.%20%C2%BFPuedes%20compartir%20m%C3%A1s%20detalles?'
           rel='noopener noreferrer'
           aria-label='WhatsApp'
-          className='text-[0.8rem] text-first-950 flex gap-2 px-3 py-1 items-center font-semibold bg-second-200 border-4 border-second-500 rounded-md hover:rounded-md hover:bg-second-500 transition-all hover:text-white'
+          className='text-[0.8rem] text-first-950 flex gap-2 px-3 py-1 items-center font-semibold bg-second-200 border-4 border-second-500 rounded-md hover:rounded-md hover:bg-second-500 transition-all hover:text-white w-24'
         >
           Únete
           <Whatsapp />
