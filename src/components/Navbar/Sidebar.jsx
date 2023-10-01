@@ -29,7 +29,7 @@ const Sidebar = ({
     <div className='flex-grow basis-0 md:hidden flex justify-end relative z-40'>
       <button
         onClick={() => setShowSidebar(!showSidebar)}
-        className='cursor-pointer flex bg-transparent rounded w-10'
+        className='cursor-pointer flex bg-third-200/20 rounded w-10'
         aria-label='Abrir menú'
       >
         <Open />
