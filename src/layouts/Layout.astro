@@ -16,6 +16,28 @@ const { pageTitle, pageDescription } = Astro.props
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <meta name='description' content={pageDescription} />
     <meta name='generator' content={pageDescription} />
+
+    <meta property='og:type' content='website' />
+    <meta
+      property='og:title'
+      content='Portafolio de Juan Poloche, próximo edil de Usaquén'
+    />
+    <meta
+      property='og:description'
+      content='Conoce las propuestas de Juan Poloche para los comerciantes y jóvenes de Usaquén. Juntos podemos lograr un mejor futuro para nuestro sector.'
+    />
+    <meta property='og:image' content='/imgs/og-image.webp' />
+    <meta property='og:url' content='https://juanpoloche.com' />
+    <meta property='og:site_name' content='Juan Poloche' />
+    <meta property='og:locale' content='es_CO' />
+    <meta property='og:article:author' content='Esteban Mutis' />
+    <meta property='og:article:section' content='Política' />
+    <meta property='og:article:tag' content='Elecciones' />
+    <meta property='og:article:tag' content='Usaquén' />
+    <meta property='og:article:tag' content='Edil' />
+
+    <link rel='canonical' href='https://juanpoloche.com' />
+
     <meta name='author' content='Esteban Mutis' />
     <meta
       name='keywords'
@@ -37,7 +59,7 @@ const { pageTitle, pageDescription } = Astro.props
     <link rel='icon' type='image' href='/favicon-border.webp' />
     <link rel='manifest' href='/manifest.json' />
 
-    <script src="../hooks/preload.js"></script>
+    <script src='../hooks/preload.js'></script>
 
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-4HENYJB6RJ'
     ></script>
@@ -53,16 +75,5 @@ const { pageTitle, pageDescription } = Astro.props
 
   <body>
     <slot />
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('/service-worker.js')
-            .catch((error) => {
-              console.log('Error al registrar el Service Worker:', error)
-            })
-        })
-      }
-    </script>
   </body>
 </html>
