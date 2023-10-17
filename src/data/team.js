@@ -3,7 +3,7 @@ export const team = [
     id: 1,
     name: 'Liliana',
     lastName: 'Castañeda',
-    position: 'Candidata al consejo',
+    position: 'Candidata al concejo',
     instagram: 'https://www.instagram.com/lilianacastanedam/',
     description: [
       '<p>Hola, soy Liliana Castañeda, Economista y estudiante de Maestría en Ciencias Económicas de la Universidad Nacional.</p>',
