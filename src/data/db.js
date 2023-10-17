@@ -9,7 +9,7 @@ export const db = [
         icon: 'First',
         subtitle: 'Trabajamos por un desarrollo económico comercial local',
         description:
-          '<p>Nuestra labor con <strong>La Junta Administradora Local (JAL)</strong> será liderar iniciativas para apoyar a la clase media y baja, priorizando la protección y atención a los comerciantes locales.</p><p>Durante nuestro mandato en la JAL, colaboraremos estrechamente con la Alcaldía de Usaquén para establecer un convenio con la Cámara de Comercio.</p><p>Este acuerdo permitirá programas de capacitación tributaria, mejorando el conocimiento financiero de nuestros comerciantes y creando un ambiente comercial más sólido y equitativo para todos.</p>'
+          '<p>Nuestra labor con <strong>La Junta Administradora Local (JAL)</strong> será liderar iniciativas para apoyar a la clase porpular y comerciante, priorizando la protección y atención a los comerciantes locales.</p><p>Durante nuestro mandato en la JAL, colaboraremos estrechamente con la Alcaldía de Usaquén para establecer un convenio con la Cámara de Comercio.</p><p>Este acuerdo permitirá programas de capacitación tributaria, mejorando el conocimiento financiero de nuestros comerciantes y creando un ambiente comercial más sólido y equitativo para todos.</p>'
       },
       {
         id: '2',
